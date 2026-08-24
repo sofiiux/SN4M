@@ -1,0 +1,443 @@
+/* Apre le regole CSS per questo selettore. */
+.share-form-card {
+
+    /* Limita la larghezza massima dell’elemento. */
+    max-width: 820px;
+
+    /* Imposta lo spazio esterno sotto l’elemento. */
+    margin-bottom: 32px;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS per questo selettore. */
+.shared-heading {
+
+    /* Imposta lo spazio esterno sotto l’elemento. */
+    margin-bottom: 24px;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS per questo selettore. */
+.shared-search-form {
+
+    /* Sceglie il metodo usato per disporre gli elementi. */
+    display: flex;
+
+    /* Imposta lo spazio tra gli elementi. */
+    gap: 12px;
+
+    /* Limita la larghezza massima dell’elemento. */
+    max-width: 820px;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS per questo selettore. */
+.shared-search-form input {
+
+    /* Fa occupare all’elemento lo spazio disponibile. */
+    flex: 1;
+
+    /* Imposta lo spazio interno dell’elemento. */
+    padding: 13px 15px;
+
+    /* Imposta il bordo dell’elemento. */
+    border: 1px solid #444444;
+
+    /* Arrotonda gli angoli dell’elemento. */
+    border-radius: 12px;
+
+    /* Imposta il colore di sfondo. */
+    background: #2c2c2e;
+
+    /* Imposta il colore del testo. */
+    color: white;
+
+    /* Rimuove il bordo automatico del browser quando il campo è selezionato. */
+    outline: none;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS quando il campo di ricerca è selezionato. */
+.shared-search-form input:focus {
+
+    /* Cambia il colore del bordo per evidenziare il campo. */
+    border-color: #1ed760;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS per questo selettore. */
+.shared-grid {
+
+    /* Sceglie il metodo usato per disporre gli elementi. */
+    display: grid;
+
+    /* Definisce le colonne della griglia. */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    /* Imposta lo spazio tra gli elementi. */
+    gap: 20px;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS per questo selettore. */
+.shared-card {
+
+    /* Imposta lo spazio interno dell’elemento. */
+    padding: 22px;
+
+    /* Imposta il bordo dell’elemento. */
+    border: 1px solid #333333;
+
+    /* Arrotonda gli angoli dell’elemento. */
+    border-radius: 18px;
+
+    /* Imposta il colore di sfondo. */
+    background: #1c1c1e;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS per il titolo della scheda. */
+.shared-card h3 {
+
+    /* Imposta lo spazio esterno sopra l’elemento. */
+    margin-top: 0;
+
+    /* Imposta lo spazio esterno sotto l’elemento. */
+    margin-bottom: 12px;
+
+/* Chiude questo blocco di regole CSS. */
+}
+
+
+/* Apre le regole CSS per questo selettore. */
+.shared-card p {
+
+    /* Imposta il colore del testo. */
+    color: #a1a1a6;
+
+    /* Imposta la distanza tra le righe del testo. */
+    line-height: 1.5;
+
+/* Chiude questo blocco di regole CSS. */
+}
+/* RIFINITURA FINALE DELLA PAGINA CONDIVISIONI */
+/* Limita il contenuto principale della pagina alla stessa larghezza delle altre sezioni. */
+.share-form-card,
+.shared-section {
+    /* Usa la stessa larghezza massima delle card Playlist e Comunità. */
+    max-width: 960px;
+}
+/* Rende il riquadro Condividi una playlist più compatto. */
+.share-form-card {
+    /* Riduce lo spazio interno verticale. */
+    padding: 22px 24px;
+    /* Mantiene uno spazio equilibrato sotto la scheda. */
+    margin-bottom: 34px;
+}
+/* Riduce lo spazio sotto il titolo del form. */
+.share-form-card h2 {
+    /* Mantiene il titolo compatto. */
+    margin: 0 0 18px;
+}
+/* Dispone playlist, comunità e pulsante sulla stessa riga. */
+.share-form-card form {
+    /* Utilizza una griglia orizzontale. */
+    display: grid;
+    /* Crea due menu flessibili e un pulsante compatto. */
+    grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr) auto;
+    /* Allinea i controlli al fondo. */
+    align-items: end;
+    /* Imposta lo spazio tra i controlli. */
+    gap: 14px;
+}
+/* Elimina margini superflui nei gruppi del form. */
+.share-form-card .form-group {
+    /* Elimina il margine inferiore. */
+    margin-bottom: 0;
+}
+/* Uniforma i menu a tendina. */
+.share-form-card select {
+    /* Occupa tutta la larghezza della colonna. */
+    width: 100%;
+    /* Imposta un'altezza coerente. */
+    padding: 12px 14px;
+    /* Imposta il bordo. */
+    border: 1px solid #444444;
+    /* Arrotonda gli angoli. */
+    border-radius: 12px;
+    /* Imposta lo sfondo. */
+    background: #29292c;
+    /* Imposta il colore del testo. */
+    color: white;
+    /* Rimuove il bordo automatico. */
+    outline: none;
+}
+/* Evidenzia il menu selezionato. */
+.share-form-card select:focus {
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+}
+/* Mantiene il messaggio vicino al form senza creare spazio vuoto eccessivo. */
+#share-message {
+    /* Imposta un margine compatto. */
+    margin: 14px 0 0;
+}
+/* Organizza titolo e ricerca delle playlist condivise. */
+.shared-heading {
+    /* Utilizza una griglia verticale compatta. */
+    display: grid;
+    /* Imposta lo spazio tra titolo e ricerca. */
+    gap: 18px;
+    /* Mantiene uno spazio uniforme sotto. */
+    margin-bottom: 20px;
+}
+/* Elimina margini superflui dal titolo. */
+.shared-heading h2 {
+    /* Mantiene il titolo vicino alla descrizione. */
+    margin: 0 0 7px;
+}
+/* Imposta la ricerca alla stessa larghezza della sezione. */
+.shared-search-form {
+    /* Occupa tutta la larghezza disponibile. */
+    max-width: 960px;
+}
+/* Arrotonda il pulsante Cerca. */
+.shared-search-form .page-button {
+    /* Usa la forma pill. */
+    border-radius: 999px;
+}
+/* Mostra le playlist condivise una sotto l'altra come le altre card dell'app. */
+.shared-grid {
+    /* Utilizza una singola colonna. */
+    grid-template-columns: 1fr;
+    /* Riduce lo spazio tra le schede. */
+    gap: 14px;
+}
+/* Rende le card condivise più compatte. */
+.shared-card {
+    /* Riduce lo spazio interno. */
+    padding: 18px 22px;
+    /* Arrotonda come le altre card. */
+    border-radius: 16px;
+}
+/* Adatta il form di condivisione agli schermi piccoli. */
+@media (max-width: 800px) {
+    /* Dispone i controlli verticalmente. */
+    .share-form-card form {
+        /* Usa una sola colonna. */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* NUOVO STILE DELLE PLAYLIST CONDIVISE */
+/* Rende la scheda condivisa più elegante e simile a una scheda informativa musicale. */
+.shared-card {
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta uno spazio interno più ampio ma compatto. */
+    padding: 26px 28px;
+    /* Imposta uno sfondo scuro uniforme. */
+    background: #1c1c1e;
+    /* Imposta un bordo sottile. */
+    border: 1px solid #38383b;
+    /* Arrotonda maggiormente gli angoli. */
+    border-radius: 18px;
+    /* Include il padding nella larghezza complessiva. */
+    box-sizing: border-box;
+}
+/* Contenitore delle informazioni principali della playlist condivisa. */
+.shared-card-content {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Dispone gli elementi verticalmente. */
+    flex-direction: column;
+    /* Imposta lo spazio tra le sezioni della scheda. */
+    gap: 16px;
+}
+/* Titolo della playlist condivisa. */
+.shared-card-content h3 {
+    /* Elimina i margini automatici. */
+    margin: 0;
+    /* Imposta una dimensione più evidente. */
+    font-size: 24px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 700;
+}
+/* Riga contenente comunità e autore. */
+.shared-card-meta {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Permette agli elementi di andare a capo quando necessario. */
+    flex-wrap: wrap;
+    /* Imposta lo spazio tra comunità e autore. */
+    gap: 10px 24px;
+    /* Imposta il colore del testo secondario. */
+    color: #b8b8bd;
+    /* Imposta la dimensione del testo. */
+    font-size: 15px;
+}
+/* Aggiunge un separatore tra comunità e autore. */
+.shared-card-meta span + span {
+    /* Crea una linea di separazione verticale. */
+    border-left: 1px solid #4a4a4e;
+    /* Aggiunge spazio a sinistra del secondo elemento. */
+    padding-left: 24px;
+}
+/* Descrizione della playlist condivisa. */
+.shared-card-description {
+    /* Elimina i margini automatici. */
+    margin: 0;
+    /* Imposta spazio sopra e sotto la descrizione. */
+    padding: 16px 0;
+    /* Aggiunge una linea sopra. */
+    border-top: 1px solid #343438;
+    /* Aggiunge una linea sotto. */
+    border-bottom: 1px solid #343438;
+    /* Imposta un colore leggermente più chiaro. */
+    color: #d2d2d6 !important;
+    /* Imposta una dimensione leggibile. */
+    font-size: 16px;
+    /* Imposta la distanza tra le righe. */
+    line-height: 1.5;
+}
+/* Contenitore di tag e durata. */
+.shared-card-details {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Permette ai dettagli di andare a capo. */
+    flex-wrap: wrap;
+    /* Imposta lo spazio tra i dettagli. */
+    gap: 12px;
+}
+/* Singolo dettaglio della playlist condivisa. */
+.shared-detail-chip {
+    /* Mostra il dettaglio come elemento flessibile. */
+    display: inline-flex;
+    /* Centra verticalmente il testo. */
+    align-items: center;
+    /* Imposta lo spazio interno. */
+    padding: 9px 14px;
+    /* Imposta uno sfondo leggermente più chiaro. */
+    background: #29292c;
+    /* Imposta un bordo sottile. */
+    border: 1px solid #38383c;
+    /* Rende il dettaglio molto arrotondato. */
+    border-radius: 999px;
+    /* Imposta il colore del testo. */
+    color: #d0d0d4;
+    /* Imposta una dimensione compatta. */
+    font-size: 14px;
+}
+/* Lista delle canzoni presenti nella playlist condivisa. */
+.shared-song-list {
+    /* Elimina il margine superiore. */
+    margin: 2px 0 0;
+    /* Mantiene uno spazio a sinistra per i punti elenco. */
+    padding-left: 20px;
+    /* Imposta il colore del testo. */
+    color: #b8b8bd;
+}
+/* Singola canzone della playlist condivisa. */
+.shared-song-list li {
+    /* Imposta lo spazio verticale tra le canzoni. */
+    margin: 7px 0;
+    /* Imposta la distanza tra le righe. */
+    line-height: 1.4;
+}
+/* Adatta la nuova scheda agli schermi piccoli. */
+@media (max-width: 700px) {
+    /* Modifica la scheda condivisa. */
+    .shared-card {
+        /* Riduce lo spazio interno. */
+        padding: 22px 20px;
+    }
+    /* Modifica la riga delle informazioni. */
+    .shared-card-meta {
+        /* Dispone comunità e autore verticalmente. */
+        flex-direction: column;
+        /* Riduce lo spazio. */
+        gap: 7px;
+    }
+    /* Rimuove il separatore verticale su schermi piccoli. */
+    .shared-card-meta span + span {
+        /* Rimuove il bordo sinistro. */
+        border-left: none;
+        /* Rimuove lo spazio a sinistra. */
+        padding-left: 0;
+    }
+}
+
+
+/* LAYOUT FINALE PIÙ INTUITIVO DELLA PAGINA CONDIVISIONI */
+.main-content > .topbar {
+    display: block;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.main-content > .topbar h1 {
+    margin: 0 0 8px;
+}
+
+.main-content > .topbar .page-description {
+    margin: 0;
+}
+
+.share-form-card {
+    max-width: 960px;
+    margin-bottom: 30px;
+}
+
+.share-form-card h2 {
+    margin: 0 0 18px;
+}
+
+.share-form-card .page-button {
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.shared-section {
+    max-width: 960px;
+}
+
+.shared-search-direct {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 0 22px;
+}
+
+.shared-search-direct input {
+    flex: 1;
+}
+
+.shared-search-direct .page-button {
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    .shared-search-direct {
+        flex-direction: column;
+    }
+
+    .shared-search-direct .page-button {
+        width: fit-content;
+    }
+}

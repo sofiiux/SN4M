@@ -1,0 +1,213 @@
+/* Imposta il contenuto principale della pagina profilo. */
+.profile-main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Gestisce l'intestazione della pagina. */
+.profile-header {
+    margin-bottom: 32px;
+}
+
+
+/* Gestisce il titolo principale. */
+.profile-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+/* Gestisce la descrizione della pagina. */
+.profile-header .page-description {
+    margin: 0;
+    color: #b3b3b3;
+    font-size: 16px;
+}
+
+
+/* Crea il riquadro principale dell'account. */
+.profile-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 28px 22px 32px 22px;
+
+    background-color: #1c1c1e;
+
+    border: 1px solid #353538;
+    border-radius: 16px;
+}
+
+
+/* Gestisce il titolo Account. */
+.profile-card h2 {
+    margin: 0 0 24px 0;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* Gestisce ogni gruppo del form. */
+.profile-card .form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Gestisce le etichette. */
+.profile-card label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+/* Gestisce i campi Username ed Email. */
+.profile-card input[type="text"],
+.profile-card input[type="email"] {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    background-color: #242426;
+    color: #ffffff;
+
+    border: 1px solid #3c3c40;
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+/* Modifica il bordo del campo selezionato. */
+.profile-card input[type="text"]:focus,
+.profile-card input[type="email"]:focus {
+    border-color: #1ed760;
+}
+
+
+/* Gestisce il contenitore dei generi musicali. */
+.profile-card .genre-selector {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+
+/* Gestisce i pulsanti dei generi. */
+.profile-card .genre-selector button {
+    width: auto;
+
+    padding: 7px 13px;
+
+    background-color: #242426;
+    color: #ffffff;
+
+    border: 1px solid #48484c;
+    border-radius: 999px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+/* Gestisce il passaggio del mouse sui generi. */
+.profile-card .genre-selector button:hover {
+    border-color: #1ed760;
+}
+
+
+/* Gestisce un genere selezionato. */
+.profile-card .genre-selector button.selected {
+    background-color: #1ed760;
+    color: #000000;
+
+    border-color: #1ed760;
+}
+
+
+/* Gestisce l'area del pulsante Salva modifiche. */
+.profile-save-area {
+    display: flex;
+
+    margin-top: 18px;
+}
+
+
+/* Mantiene compatto il pulsante Salva modifiche. */
+.profile-save-area .page-button {
+    width: auto;
+
+    padding: 11px 20px;
+
+    border-radius: 999px;
+}
+
+
+/* Gestisce l'area del pulsante Elimina account. */
+.delete-account-area {
+    display: flex;
+
+    margin-top: 18px;
+}
+
+
+/* Gestisce il pulsante Elimina account. */
+.delete-account-area .danger-button {
+    width: auto;
+
+    padding: 11px 20px;
+
+    background-color: #d84c5b;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* Gestisce il passaggio del mouse su Elimina account. */
+.delete-account-area .danger-button:hover {
+    background-color: #c94352;
+}
+
+
+/* Adatta la pagina agli schermi più piccoli. */
+@media screen and (max-width: 700px) {
+
+    /* Riduce il titolo principale. */
+    .profile-header h1 {
+        font-size: 28px;
+    }
+
+
+    /* Riduce lo spazio interno del riquadro. */
+    .profile-card {
+        padding: 22px 18px;
+    }
+
+
+    /* Mantiene i generi distribuiti correttamente. */
+    .profile-card .genre-selector {
+        gap: 7px;
+    }
+}

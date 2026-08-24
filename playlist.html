@@ -1,0 +1,374 @@
+<!-- Indica che il documento utilizza HTML5. -->
+<!DOCTYPE html>
+
+<!-- Apre il documento HTML e imposta la lingua italiana. -->
+<html lang="it">
+
+<!-- Apre la sezione contenente le informazioni della pagina. -->
+<head>
+
+    <!-- Imposta la codifica dei caratteri UTF-8. -->
+    <meta charset="UTF-8">
+
+    <!-- Adatta la pagina alle dimensioni dello schermo. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Imposta il titolo mostrato nella scheda del browser. -->
+    <title>SN4M - Playlist</title>
+
+    <!-- Collega il foglio di stile generale. -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Collega il foglio di stile del layout. -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- Collega il foglio di stile della pagina Playlist. -->
+    <link rel="stylesheet" href="css/playlist.css">
+
+<!-- Chiude la sezione contenente le informazioni della pagina. -->
+</head>
+
+<!-- Apre il contenuto visibile della pagina. -->
+<body>
+
+    <!-- Apre la barra superiore dell'applicazione. -->
+    <header class="main-header">
+
+        <!-- Crea il collegamento del logo alla pagina di ricerca. -->
+        <a href="ricerca.html" class="header-logo">
+
+            <!-- Mostra il nome dell'applicazione. -->
+            SN4M
+
+        <!-- Chiude il collegamento del logo. -->
+        </a>
+
+        <!-- Apre il menu di navigazione principale. -->
+        <nav class="header-menu">
+
+            <!-- Crea il collegamento alla pagina Ricerca brani. -->
+            <a href="ricerca.html">
+
+                <!-- Mostra il nome della pagina Ricerca brani. -->
+                Ricerca brani
+
+            <!-- Chiude il collegamento alla pagina Ricerca brani. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Playlist e lo indica come attivo. -->
+            <a href="playlist.html" class="active">
+
+                <!-- Mostra il nome della pagina Playlist. -->
+                Playlist
+
+            <!-- Chiude il collegamento alla pagina Playlist. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Comunità. -->
+            <a href="comunita.html">
+
+                <!-- Mostra il nome della pagina Comunità. -->
+                Comunità
+
+            <!-- Chiude il collegamento alla pagina Comunità. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Condivisioni. -->
+            <a href="condivisioni.html">
+
+                <!-- Mostra il nome della pagina Condivisioni. -->
+                Condivisioni
+
+            <!-- Chiude il collegamento alla pagina Condivisioni. -->
+            </a>
+
+        <!-- Chiude il menu di navigazione principale. -->
+        </nav>
+
+        <!-- Apre il contenitore del profilo. -->
+        <div class="header-profile">
+
+            <!-- Apre il menu del profilo. -->
+            <div class="profile-menu">
+
+                <!-- Crea il pulsante circolare del profilo. -->
+                <button
+                    type="button"
+                    id="profile-menu-button"
+                    class="profile-menu-button"
+                >
+
+                    <!-- Mostra temporaneamente l'iniziale dell'utente. -->
+                    U
+
+                <!-- Chiude il pulsante del profilo. -->
+                </button>
+
+                <!-- Apre la tendina del profilo. -->
+                <div
+                    id="profile-dropdown"
+                    class="profile-dropdown"
+                >
+
+                    <!-- Mostra il nome dell'utente. -->
+                    <strong id="profile-menu-username">
+
+                        <!-- Mostra temporaneamente la scritta Utente. -->
+                        Utente
+
+                    <!-- Chiude il nome dell'utente. -->
+                    </strong>
+
+                    <!-- Mostra l'email dell'utente. -->
+                    <p id="profile-menu-email"></p>
+
+                    <!-- Crea il collegamento alla pagina Profilo. -->
+                    <a
+                        href="profilo.html"
+                        class="profile-dropdown-link"
+                    >
+
+                        <!-- Mostra il testo del collegamento. -->
+                        Modifica profilo
+
+                    <!-- Chiude il collegamento al profilo. -->
+                    </a>
+
+                    <!-- Crea il pulsante Logout. -->
+                    <button
+                        type="button"
+                        id="profile-logout-button"
+                        class="profile-dropdown-logout"
+                    >
+
+                        <!-- Mostra il testo del pulsante. -->
+                        Logout
+
+                    <!-- Chiude il pulsante Logout. -->
+                    </button>
+
+                <!-- Chiude la tendina del profilo. -->
+                </div>
+
+            <!-- Chiude il menu del profilo. -->
+            </div>
+
+        <!-- Chiude il contenitore del profilo. -->
+        </div>
+
+    <!-- Chiude la barra superiore. -->
+    </header>
+
+    <!-- Apre il contenitore generale della pagina. -->
+    <div class="app-layout">
+
+        <!-- Apre il contenuto principale. -->
+        <main class="main-content playlist-main">
+
+            <!-- Apre l'intestazione della pagina. -->
+            <header class="topbar playlist-header">
+
+                <!-- Apre il contenitore del titolo. -->
+                <div>
+
+                    <!-- Apre il titolo principale. -->
+                    <h1>
+
+                        <!-- Mostra il titolo della pagina. -->
+                        Le mie playlist
+
+                    <!-- Chiude il titolo principale. -->
+                    </h1>
+
+                    <!-- Apre la descrizione. -->
+                    <p class="page-description">
+
+                        <!-- Mostra la descrizione della pagina. -->
+                        Crea, modifica ed elimina le tue playlist.
+
+                    <!-- Chiude la descrizione. -->
+                    </p>
+
+                    <!-- Crea il pulsante per creare una nuova playlist. -->
+                    <button
+                        type="button"
+                        id="new-playlist-button"
+                        class="page-button"
+                    >
+
+                        <!-- Mostra il testo del pulsante. -->
+                        + Crea playlist
+
+                    <!-- Chiude il pulsante Crea playlist. -->
+                    </button>
+
+                <!-- Chiude il contenitore del titolo. -->
+                </div>
+
+            <!-- Chiude l'intestazione della pagina. -->
+            </header>
+
+
+            <!-- Apre la sezione contenente il form della playlist. -->
+            <section
+                id="playlist-form-section"
+                class="content-card playlist-form-section"
+            >
+
+                <!-- Apre il titolo del form. -->
+                <h2>
+
+                    <!-- Mostra il titolo iniziale del form. -->
+                    Nuova playlist
+
+                <!-- Chiude il titolo del form. -->
+                </h2>
+
+                <!-- Apre il form della playlist. -->
+                <form id="playlist-form">
+
+                    <!-- Crea il campo nascosto contenente l'id della playlist. -->
+                    <input
+                        type="hidden"
+                        id="playlist-id"
+                    >
+
+                    <!-- Apre il gruppo del titolo. -->
+                    <div class="form-group">
+
+                        <!-- Crea l'etichetta del titolo. -->
+                        <label for="playlist-title">
+
+                            <!-- Mostra il nome del campo. -->
+                            Titolo
+
+                        <!-- Chiude l'etichetta del titolo. -->
+                        </label>
+
+                        <!-- Crea il campo del titolo. -->
+                        <input
+                            type="text"
+                            id="playlist-title"
+                            required
+                        >
+
+                    <!-- Chiude il gruppo del titolo. -->
+                    </div>
+
+                    <!-- Apre il gruppo della descrizione. -->
+                    <div class="form-group">
+
+                        <!-- Crea l'etichetta della descrizione. -->
+                        <label for="playlist-description">
+
+                            <!-- Mostra il nome del campo. -->
+                            Descrizione
+
+                        <!-- Chiude l'etichetta della descrizione. -->
+                        </label>
+
+                        <!-- Crea il campo della descrizione. -->
+                        <textarea
+                            id="playlist-description"
+                            rows="4"
+                            required
+                        ></textarea>
+
+                    <!-- Chiude il gruppo della descrizione. -->
+                    </div>
+
+                    <!-- Apre il gruppo dei tag. -->
+                    <div class="form-group">
+
+                        <!-- Crea l'etichetta dei tag. -->
+                        <label for="playlist-tags">
+
+                            <!-- Mostra il nome del campo. -->
+                            Tag
+
+                        <!-- Chiude l'etichetta dei tag. -->
+                        </label>
+
+                        <!-- Crea il campo nascosto contenente i generi selezionati. -->
+                        <input
+                            type="hidden"
+                            id="playlist-tags"
+                            required
+                        >
+
+                        <!-- Crea il contenitore dei pulsanti dei generi. -->
+                        <div
+                            class="genre-selector"
+                            data-genre-input="playlist-tags"
+                        ></div>
+
+                    <!-- Chiude il gruppo dei tag. -->
+                    </div>
+
+                    <!-- Apre il contenitore dei pulsanti del form. -->
+                    <div class="form-actions">
+
+                        <!-- Crea il pulsante per salvare la playlist. -->
+                        <button
+                            type="submit"
+                            class="page-button"
+                        >
+
+                            <!-- Mostra il testo del pulsante. -->
+                            Salva playlist
+
+                        <!-- Chiude il pulsante Salva. -->
+                        </button>
+
+                        <!-- Crea il pulsante per annullare. -->
+                        <button
+                            type="button"
+                            id="cancel-playlist-button"
+                            class="page-button secondary-button"
+                        >
+
+                            <!-- Mostra il testo del pulsante. -->
+                            Annulla
+
+                        <!-- Chiude il pulsante Annulla. -->
+                        </button>
+
+                    <!-- Chiude il contenitore dei pulsanti. -->
+                    </div>
+
+                <!-- Chiude il form. -->
+                </form>
+
+            <!-- Chiude la sezione del form. -->
+            </section>
+
+
+            <!-- Apre la sezione contenente le playlist. -->
+            <section class="playlist-section">
+
+                <!-- Crea il contenitore delle playlist. -->
+                <div
+                    id="playlist-list"
+                    class="playlist-grid"
+                ></div>
+
+            <!-- Chiude la sezione delle playlist. -->
+            </section>
+
+        <!-- Chiude il contenuto principale. -->
+        </main>
+
+    <!-- Chiude il contenitore generale. -->
+    </div>
+
+    <!-- Collega il file JavaScript con le funzioni comuni. -->
+    <script src="js/storage.js"></script>
+
+    <!-- Collega il file JavaScript della pagina Playlist. -->
+    <script src="js/playlist.js"></script>
+
+<!-- Chiude il contenuto visibile della pagina. -->
+</body>
+
+<!-- Chiude il documento HTML. -->
+</html>

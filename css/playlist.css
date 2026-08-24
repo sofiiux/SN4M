@@ -1,0 +1,333 @@
+/* CONTENUTO DELLA PAGINA PLAYLIST */
+
+/* Imposta il contenuto principale della pagina Playlist. */
+.playlist-main {
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+}
+
+
+/* INTESTAZIONE DELLA PAGINA */
+
+/* Imposta l'intestazione della pagina Playlist. */
+.playlist-header {
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta lo spazio sotto l'intestazione. */
+    margin-bottom: 24px;
+}
+
+
+/* SEZIONE DEL FORM */
+
+/* Imposta la sezione contenente il form. */
+.playlist-form-section {
+    /* Nasconde inizialmente il form. */
+    display: none;
+    /* Limita la larghezza del form. */
+    max-width: 700px;
+    /* Imposta lo spazio sotto il form. */
+    margin-bottom: 34px;
+}
+
+
+/* Mostra il form quando viene aggiunta la classe visible. */
+.playlist-form-section.visible {
+    /* Mostra il form. */
+    display: block;
+}
+
+
+/* Imposta i gruppi dei campi del form. */
+.playlist-form-section .form-group {
+    /* Imposta lo spazio sotto ogni campo. */
+    margin-bottom: 18px;
+}
+
+
+/* Imposta le etichette dei campi. */
+.playlist-form-section label {
+    /* Mostra l'etichetta su una riga separata. */
+    display: block;
+    /* Imposta lo spazio sotto l'etichetta. */
+    margin-bottom: 8px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 600;
+}
+
+
+/* Imposta i campi input e textarea. */
+.playlist-form-section input,
+.playlist-form-section textarea {
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta lo spazio interno. */
+    padding: 13px 14px;
+    /* Imposta il bordo. */
+    border: 1px solid #444444;
+    /* Arrotonda gli angoli. */
+    border-radius: 10px;
+    /* Imposta lo sfondo. */
+    background: #242426;
+    /* Imposta il colore del testo. */
+    color: white;
+    /* Rimuove il bordo automatico del browser. */
+    outline: none;
+}
+
+
+/* Evidenzia il campo selezionato. */
+.playlist-form-section input:focus,
+.playlist-form-section textarea:focus {
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+}
+
+
+/* Imposta il contenitore dei pulsanti del form. */
+.form-actions {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Imposta lo spazio tra i pulsanti. */
+    gap: 10px;
+    /* Imposta lo spazio sopra. */
+    margin-top: 22px;
+}
+
+
+/* SEZIONE PLAYLIST */
+
+/* Imposta il contenitore generale della sezione. */
+.playlist-section {
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Limita la larghezza visiva dell'elenco. */
+    max-width: 1000px;
+}
+
+
+/* Imposta il titolo "Le tue playlist". */
+.playlist-section > h2 {
+    /* Elimina il margine superiore. */
+    margin-top: 0;
+    /* Imposta lo spazio sotto il titolo. */
+    margin-bottom: 24px;
+    /* Imposta la dimensione del titolo. */
+    font-size: 24px;
+}
+
+
+/* PULSANTE CREA PLAYLIST */
+
+/* Imposta il pulsante principale per creare una playlist. */
+#new-playlist-button {
+    /* Mostra il pulsante come elemento separato. */
+    display: block;
+    /* Impedisce al pulsante di allargarsi. */
+    width: fit-content;
+    /* Imposta lo spazio sopra il pulsante. */
+    margin-top: 22px;
+    /* Imposta lo spazio sotto il pulsante. */
+    margin-bottom: 0;
+    /* Rende il pulsante molto arrotondato. */
+    border-radius: 999px;
+    /* Imposta lo spazio interno orizzontale. */
+    padding-left: 22px;
+    /* Imposta lo spazio interno orizzontale. */
+    padding-right: 22px;
+}
+
+
+/* GRIGLIA DELLE PLAYLIST */
+
+/* Imposta il contenitore delle playlist. */
+.playlist-grid {
+    /* Utilizza una griglia. */
+    display: grid;
+    /* Mostra una playlist per riga. */
+    grid-template-columns: 1fr;
+    /* Imposta lo spazio tra più playlist. */
+    gap: 16px;
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+}
+
+
+/* SINGOLA PLAYLIST */
+
+/* Imposta la scheda di una playlist. */
+.playlist-card {
+    /* Utilizza una griglia orizzontale. */
+    display: grid;
+    /* Definisce le colonne della scheda. */
+    grid-template-columns: 150px 1.6fr 130px 100px auto;
+    /* Allinea gli elementi verticalmente al centro. */
+    align-items: center;
+    /* Imposta lo spazio tra gli elementi. */
+    gap: 18px;
+    /* Imposta lo spazio interno. */
+    padding: 17px 22px;
+    /* Imposta lo sfondo. */
+    background: #1c1c1e;
+    /* Imposta il bordo. */
+    border: 1px solid #333336;
+    /* Arrotonda gli angoli. */
+    border-radius: 16px;
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta un'altezza minima compatta. */
+    min-height: 76px;
+}
+
+
+/* Imposta il titolo della playlist. */
+.playlist-card h3 {
+    /* Elimina i margini automatici. */
+    margin: 0;
+    /* Imposta la dimensione del testo. */
+    font-size: 18px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 700;
+}
+
+
+/* Imposta i testi secondari della playlist. */
+.playlist-card p {
+    /* Elimina i margini automatici. */
+    margin: 0;
+    /* Imposta il colore. */
+    color: #a9a9ad;
+    /* Imposta la distanza tra le righe. */
+    line-height: 1.4;
+}
+
+
+/* CONTENITORE DEI PULSANTI DELLA PLAYLIST */
+
+/* Imposta i pulsanti Modifica ed Elimina. */
+.playlist-actions {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Mantiene i pulsanti sulla stessa riga. */
+    flex-wrap: nowrap;
+    /* Imposta lo spazio tra i pulsanti. */
+    gap: 10px;
+    /* Allinea i pulsanti a destra. */
+    justify-content: flex-end;
+    /* Elimina eventuali margini superiori. */
+    margin-top: 0;
+}
+
+
+/* Imposta i pulsanti delle playlist. */
+.playlist-actions .page-button {
+    /* Impedisce ai pulsanti di andare a capo. */
+    white-space: nowrap;
+}
+
+
+/* STATO VUOTO */
+
+/* Nasconde eventuali vecchi stati vuoti rimasti nel CSS. */
+.playlist-empty-state {
+    /* Nasconde completamente il vecchio riquadro. */
+    display: none;
+}
+
+
+/* Nasconde l'eventuale vecchia icona dello stato vuoto. */
+.playlist-empty-icon {
+    /* Nasconde completamente l'elemento. */
+    display: none;
+}
+
+
+/* GENERI MUSICALI DEL FORM */
+
+/* Imposta il contenitore dei generi. */
+.playlist-form-section .genre-selector {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Permette ai generi di andare a capo. */
+    flex-wrap: wrap;
+    /* Imposta lo spazio tra i generi. */
+    gap: 7px;
+    /* Imposta un piccolo spazio superiore. */
+    margin-top: 4px;
+}
+
+
+/* Imposta i pulsanti dei generi. */
+.playlist-form-section .genre-chip {
+    /* Imposta uno spazio interno compatto. */
+    padding: 6px 12px;
+    /* Imposta la dimensione del testo. */
+    font-size: 13px;
+    /* Rende i pulsanti molto arrotondati. */
+    border-radius: 999px;
+}
+
+
+/* ADATTAMENTO AGLI SCHERMI PIÙ PICCOLI */
+
+@media (max-width: 900px) {
+
+    /* Modifica la scheda della playlist. */
+    .playlist-card {
+        /* Riduce il numero di colonne. */
+        grid-template-columns: 1fr 1fr;
+        /* Imposta lo spazio tra gli elementi. */
+        gap: 12px 18px;
+    }
+
+    /* Modifica i pulsanti della playlist. */
+    .playlist-actions {
+        /* Fa occupare ai pulsanti tutta la riga. */
+        grid-column: 1 / -1;
+        /* Allinea i pulsanti a sinistra. */
+        justify-content: flex-start;
+    }
+}
+
+
+/* Adatta la pagina agli smartphone. */
+@media (max-width: 700px) {
+
+    /* Modifica l'intestazione. */
+    .playlist-header {
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+        /* Allinea gli elementi a sinistra. */
+        align-items: flex-start;
+    }
+
+    /* Modifica la scheda della playlist. */
+    .playlist-card {
+        /* Dispone tutti gli elementi su una sola colonna. */
+        grid-template-columns: 1fr;
+        /* Imposta lo spazio tra gli elementi. */
+        gap: 10px;
+    }
+
+    /* Modifica i pulsanti della playlist. */
+    .playlist-actions {
+        /* Utilizza tutta la larghezza disponibile. */
+        width: 100%;
+        /* Permette ai pulsanti di andare a capo. */
+        flex-wrap: wrap;
+    }
+
+    /* Modifica i pulsanti del form. */
+    .form-actions {
+        /* Dispone i pulsanti verticalmente. */
+        flex-direction: column;
+    }
+
+    /* Imposta il pulsante Crea playlist sui dispositivi piccoli. */
+    #new-playlist-button {
+        /* Mantiene il pulsante allineato a sinistra. */
+        margin-left: 0;
+        /* Mantiene lo spazio sotto. */
+        margin-bottom: 22px;
+    }
+}

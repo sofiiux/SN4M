@@ -1,0 +1,499 @@
+/* Applica il box-sizing a tutti gli elementi. */
+* {
+    /* Include padding e bordo nel calcolo delle dimensioni. */
+    box-sizing: border-box;
+}
+
+/* Stile generale della pagina. */
+body {
+    /* Elimina il margine automatico del browser. */
+    margin: 0;
+    /* Imposta il font principale della pagina. */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                 "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    /* Migliora la resa del testo sui browser WebKit. */
+    -webkit-font-smoothing: antialiased;
+    /* Migliora la resa del testo su Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Imposta lo sfondo generale. */
+    background: #111111;
+    /* Imposta il colore principale del testo. */
+    color: #ffffff;
+}
+
+/* Applica uno stile comune a tutti i titoli. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* Imposta il font dei titoli. */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                 "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    /* Riduce leggermente la distanza tra le lettere. */
+    letter-spacing: -0.02em;
+}
+
+/* Imposta il colore dei collegamenti. */
+a {
+    /* Mantiene il colore dell'elemento che contiene il link. */
+    color: inherit;
+}
+
+/* Applica lo stesso font agli elementi dei form. */
+button,
+input,
+textarea,
+select {
+    /* Utilizza il font ereditato dalla pagina. */
+    font: inherit;
+}
+
+/* Modifica il cursore sui pulsanti. */
+button {
+    /* Mostra il cursore a forma di mano. */
+    cursor: pointer;
+}
+
+/* PAGINE LOGIN E REGISTRAZIONE */
+
+/* Imposta il layout delle pagine Login e Registrazione. */
+.login-page,
+.registration-page {
+    /* Imposta l'altezza minima della pagina. */
+    min-height: 100vh;
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Centra orizzontalmente la scheda. */
+    justify-content: center;
+    /* Centra verticalmente la scheda. */
+    align-items: center;
+    /* Imposta lo spazio interno della pagina. */
+    padding: 24px;
+    /* Imposta lo sfondo della pagina. */
+    background: #111111;
+}
+
+/* Imposta lo stile comune delle schede Login e Registrazione. */
+.login-card,
+.registration-card {
+    /* Fa occupare tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta lo spazio interno. */
+    padding: 34px;
+    /* Imposta lo sfondo della scheda. */
+    background: #1b1b1d;
+    /* Imposta il bordo della scheda. */
+    border: 1px solid #303033;
+    /* Arrotonda gli angoli. */
+    border-radius: 16px;
+}
+
+/* Imposta la larghezza della scheda Login. */
+.login-card {
+    /* Mantiene il Login più compatto. */
+    max-width: 440px;
+}
+
+/* Imposta la larghezza della scheda Registrazione. */
+.registration-card {
+    /* Allarga la registrazione per disporre i generi su meno righe. */
+    max-width: 650px;
+}
+
+/* Imposta il titolo SN4M. */
+.login-card h1,
+.registration-card h1 {
+    /* Elimina il margine automatico. */
+    margin: 0;
+    /* Imposta il colore verde. */
+    color: #1ed760;
+    /* Centra il testo. */
+    text-align: center;
+    /* Imposta il font del titolo. */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                 "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    /* Imposta la dimensione del titolo. */
+    font-size: 36px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 700;
+    /* Riduce leggermente la distanza tra le lettere. */
+    letter-spacing: -1.2px;
+}
+
+/* Centra i testi principali delle schede. */
+.subtitle,
+.login-card h2,
+.registration-card h2,
+.registration-link,
+.login-link {
+    /* Centra il testo. */
+    text-align: center;
+}
+
+/* Imposta i titoli secondari. */
+.login-card h2,
+.registration-card h2 {
+    /* Imposta il testo semi-grassetto. */
+    font-weight: 600;
+    /* Riduce leggermente la distanza tra le lettere. */
+    letter-spacing: -0.5px;
+}
+
+/* Imposta il colore dei testi secondari. */
+.subtitle,
+.registration-link,
+.login-link,
+.page-description,
+.empty-message {
+    /* Imposta il colore grigio chiaro. */
+    color: #a9a9ad;
+}
+
+/* Imposta lo spazio sotto ogni gruppo del form. */
+.form-group {
+    /* Imposta il margine inferiore. */
+    margin-bottom: 18px;
+}
+
+/* Imposta lo stile delle etichette dei campi. */
+.form-group label {
+    /* Mostra l'etichetta su una riga separata. */
+    display: block;
+    /* Imposta lo spazio sotto l'etichetta. */
+    margin-bottom: 8px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 600;
+    /* Imposta la dimensione del testo. */
+    font-size: 14px;
+    /* Riduce leggermente la distanza tra le lettere. */
+    letter-spacing: -0.1px;
+}
+
+/* Imposta lo stile dei campi dei form. */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    /* Fa occupare tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta lo spazio interno. */
+    padding: 12px 14px;
+    /* Imposta il bordo. */
+    border: 1px solid #3b3b3e;
+    /* Arrotonda gli angoli. */
+    border-radius: 10px;
+    /* Imposta lo sfondo. */
+    background: #252527;
+    /* Imposta il colore del testo. */
+    color: #ffffff;
+    /* Rimuove il bordo automatico del browser. */
+    outline: none;
+    /* Imposta la dimensione del testo. */
+    font-size: 16px;
+}
+
+/* Imposta il colore dei placeholder. */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    /* Imposta il colore del testo segnaposto. */
+    color: #77777c;
+}
+
+/* Evidenzia i campi selezionati. */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+}
+
+/* PULSANTI */
+
+/* Imposta lo stile comune dei pulsanti. */
+.page-button,
+.secondary-button,
+.danger-button,
+.login-card button,
+.registration-card button {
+    /* Imposta lo spazio interno. */
+    padding: 10px 18px;
+    /* Rimuove il bordo predefinito. */
+    border: none;
+    /* Arrotonda gli angoli. */
+    border-radius: 10px;
+    /* Imposta il font. */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                 "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    /* Imposta il testo semi-grassetto. */
+    font-weight: 600;
+    /* Riduce leggermente la distanza tra le lettere. */
+    letter-spacing: -0.15px;
+}
+
+/* Imposta i pulsanti principali. */
+.page-button,
+.login-card button,
+.registration-card button {
+    /* Imposta lo sfondo verde. */
+    background: #1ed760;
+    /* Imposta il colore del testo. */
+    color: #000000;
+}
+
+/* Imposta l'effetto hover dei pulsanti principali. */
+.page-button:hover,
+.login-card button:hover,
+.registration-card button:hover {
+    /* Schiarisce leggermente il verde. */
+    background: #24e268;
+}
+
+/* Imposta i pulsanti secondari. */
+.secondary-button {
+    /* Imposta lo sfondo grigio. */
+    background: #303033;
+    /* Imposta il colore del testo. */
+    color: #ffffff;
+}
+
+/* Imposta l'effetto hover dei pulsanti secondari. */
+.secondary-button:hover {
+    /* Schiarisce lo sfondo. */
+    background: #3a3a3d;
+}
+
+/* Imposta i pulsanti pericolosi. */
+.danger-button {
+    /* Imposta lo sfondo rosso. */
+    background: #c94b55;
+    /* Imposta il colore del testo. */
+    color: #ffffff;
+}
+
+/* Imposta i pulsanti principali di Login e Registrazione. */
+.login-card form > button,
+.registration-card form > button {
+    /* Fa occupare tutta la larghezza disponibile. */
+    width: 100%;
+}
+
+/* MESSAGGI */
+
+/* Imposta un'altezza minima ai messaggi. */
+#messaggio-errore,
+#registration-message,
+#profile-message,
+#share-message {
+    /* Evita spostamenti del layout quando compare un messaggio. */
+    min-height: 20px;
+}
+
+/* Imposta la scheda riutilizzabile nelle varie pagine. */
+.content-card {
+    /* Imposta lo spazio interno. */
+    padding: 22px;
+    /* Imposta il bordo. */
+    border: 1px solid #303033;
+    /* Arrotonda gli angoli. */
+    border-radius: 14px;
+    /* Imposta lo sfondo. */
+    background: #1b1b1d;
+}
+
+/* Imposta il contenitore dei pulsanti nei form. */
+.form-actions {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Imposta lo spazio tra i pulsanti. */
+    gap: 10px;
+    /* Imposta lo spazio sopra i pulsanti. */
+    margin-top: 20px;
+    /* Permette ai pulsanti di andare a capo. */
+    flex-wrap: wrap;
+}
+
+/* RIFINITURA FINALE DELL'INTERFACCIA */
+
+/* Aggiunge transizioni leggere agli elementi interattivi. */
+button,
+a,
+input,
+textarea,
+select,
+.content-card {
+    /* Rende i cambi di stato più morbidi. */
+    transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+/* Uniforma i pulsanti principali dell'applicazione. */
+.page-button {
+    /* Rende i pulsanti molto arrotondati. */
+    border-radius: 999px;
+    /* Mantiene un'altezza visiva uniforme. */
+    padding: 11px 20px;
+}
+
+/* Aggiunge un feedback leggero ai pulsanti principali. */
+.page-button:hover {
+    /* Solleva leggermente il pulsante. */
+    transform: translateY(-1px);
+}
+
+/* Uniforma le schede principali. */
+.content-card {
+    /* Usa un bordo leggermente più discreto. */
+    border-color: #303033;
+    /* Mantiene uno sfondo coerente con il resto dell'app. */
+    background: #1b1b1d;
+}
+
+/* Uniforma le descrizioni secondarie delle pagine. */
+.page-description {
+    /* Imposta un colore secondario morbido. */
+    color: #9d9da3;
+    /* Migliora la leggibilità. */
+    line-height: 1.45;
+}
+
+/* GENERI MUSICALI */
+
+/* Imposta il contenitore comune dei pulsanti dei generi musicali. */
+.genre-selector {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Permette ai pulsanti di andare a capo. */
+    flex-wrap: wrap;
+    /* Riduce lo spazio tra i pulsanti. */
+    gap: 7px;
+    /* Imposta un piccolo spazio sopra il selettore. */
+    margin-top: 4px;
+}
+
+/* Imposta il singolo pulsante di un genere musicale. */
+.genre-chip {
+    /* Riduce lo spazio interno del pulsante. */
+    padding: 6px 12px;
+    /* Imposta un bordo scuro. */
+    border: 1px solid #444448;
+    /* Rende il pulsante molto arrotondato. */
+    border-radius: 999px;
+    /* Imposta lo sfondo grigio quando il genere non è selezionato. */
+    background: #242426;
+    /* Imposta il colore del testo. */
+    color: #d7d7da;
+    /* Mostra il cursore a forma di mano. */
+    cursor: pointer;
+    /* Imposta il peso del testo. */
+    font-weight: 600;
+    /* Riduce leggermente la dimensione del testo. */
+    font-size: 13px;
+    /* Mantiene la larghezza basata sul contenuto. */
+    width: auto;
+    /* Rende morbidi i cambiamenti grafici. */
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+/* Corregge i pulsanti dei generi presenti nella pagina Registrazione. */
+.registration-card .genre-chip {
+    /* Imposta lo sfondo grigio dei generi non selezionati. */
+    background: #242426;
+    /* Imposta il bordo scuro. */
+    border: 1px solid #444448;
+    /* Imposta il colore chiaro del testo. */
+    color: #d7d7da;
+    /* Impedisce al pulsante di occupare tutta la larghezza. */
+    width: auto;
+    /* Mantiene i pulsanti più compatti. */
+    padding: 6px 12px;
+    /* Mantiene il testo leggermente più piccolo. */
+    font-size: 13px;
+}
+
+/* Corregge i pulsanti dei generi presenti nella pagina Login se eventualmente utilizzati. */
+.login-card .genre-chip {
+    /* Imposta lo sfondo grigio dei generi non selezionati. */
+    background: #242426;
+    /* Imposta il bordo scuro. */
+    border: 1px solid #444448;
+    /* Imposta il colore chiaro del testo. */
+    color: #d7d7da;
+    /* Impedisce al pulsante di occupare tutta la larghezza. */
+    width: auto;
+    /* Mantiene i pulsanti più compatti. */
+    padding: 6px 12px;
+    /* Mantiene il testo leggermente più piccolo. */
+    font-size: 13px;
+}
+
+/* Imposta l'effetto hover dei generi non selezionati. */
+.genre-chip:hover {
+    /* Schiarisce leggermente lo sfondo. */
+    background: #303033;
+    /* Schiarisce il bordo. */
+    border-color: #5a5a5f;
+    /* Mantiene il colore chiaro del testo. */
+    color: #ffffff;
+    /* Non sposta il pulsante verticalmente. */
+    transform: none;
+}
+
+/* Imposta lo stile del genere musicale selezionato. */
+.genre-chip.selected {
+    /* Imposta lo sfondo verde. */
+    background: #1ed760;
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+    /* Imposta il testo scuro. */
+    color: #0d0d0e;
+}
+
+/* Corregge con maggiore priorità il genere selezionato nella Registrazione. */
+.registration-card .genre-chip.selected {
+    /* Imposta lo sfondo verde soltanto quando il genere è selezionato. */
+    background: #1ed760;
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+    /* Imposta il colore scuro del testo. */
+    color: #0d0d0e;
+}
+
+/* Corregge con maggiore priorità il genere selezionato nel Login se eventualmente utilizzato. */
+.login-card .genre-chip.selected {
+    /* Imposta lo sfondo verde soltanto quando il genere è selezionato. */
+    background: #1ed760;
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+    /* Imposta il colore scuro del testo. */
+    color: #0d0d0e;
+}
+
+/* Imposta l'effetto hover del genere selezionato. */
+.genre-chip.selected:hover {
+    /* Mantiene il verde evidenziato. */
+    background: #22e568;
+    /* Mantiene il bordo verde. */
+    border-color: #22e568;
+    /* Mantiene il testo scuro. */
+    color: #0d0d0e;
+}
+
+/* Corregge l'hover dei generi non selezionati nella Registrazione. */
+.registration-card .genre-chip:not(.selected):hover {
+    /* Imposta uno sfondo grigio leggermente più chiaro. */
+    background: #303033;
+    /* Imposta un bordo più chiaro. */
+    border-color: #5a5a5f;
+    /* Imposta il colore bianco del testo. */
+    color: #ffffff;
+}
+
+/* Corregge l'hover dei generi selezionati nella Registrazione. */
+.registration-card .genre-chip.selected:hover {
+    /* Schiarisce leggermente il verde. */
+    background: #22e568;
+    /* Mantiene il bordo verde. */
+    border-color: #22e568;
+    /* Mantiene il testo scuro. */
+    color: #0d0d0e;
+}

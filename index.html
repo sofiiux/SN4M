@@ -1,0 +1,72 @@
+<!-- Indica che il documento usa HTML5. -->
+<!DOCTYPE html>
+<!-- Apre il documento HTML e imposta la lingua italiana. -->
+<html lang="it">
+    <!-- Apre la parte con le informazioni della pagina. -->
+    <head>
+        <!-- Imposta la codifica UTF-8 per i caratteri. -->
+        <meta charset="UTF-8">
+        <!-- Adatta la pagina alla larghezza del dispositivo. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Imposta il titolo mostrato nella scheda del browser. -->
+        <title>SN4M - Login</title>
+        <!-- Collega il foglio di stile css/style.css. -->
+        <link rel="stylesheet" href="css/style.css">
+    <!-- Chiude la parte delle informazioni della pagina. -->
+    </head>
+    <!-- Apre il contenuto visibile della pagina. -->
+    <body>
+        <!-- Apre il contenuto principale della pagina. -->
+        <main class="login-page">
+            <!-- Apre una sezione della pagina. -->
+            <section class="login-card">
+                <!-- Mostra un titolo nella pagina. -->
+                <h1>SN4M</h1>
+                <!-- Apre un paragrafo di testo. -->
+                <p class="subtitle">Social Network for Music</p>
+                <!-- Mostra un titolo nella pagina. -->
+                <h2>Accedi</h2>
+                <!-- Apre il form login-form. -->
+                <form id="login-form">
+                    <!-- Apre un contenitore con classe form-group. -->
+                    <div class="form-group">
+                        <!-- Crea l’etichetta del campo email. -->
+                        <label for="email">Email</label>
+                        <!-- Crea un campo email con id email. -->
+                        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required >
+                    <!-- Chiude l’elemento div. -->
+                    </div>
+                    <!-- Apre un contenitore con classe form-group. -->
+                    <div class="form-group">
+                        <!-- Crea l’etichetta del campo password. -->
+                        <label for="password">Password</label>
+                        <!-- Crea un campo password con id password. -->
+                        <input type="password" id="password" name="password" placeholder="Inserisci la password" required >
+                    <!-- Chiude l’elemento div. -->
+                    </div>
+                    <!-- Crea un pulsante di tipo submit. -->
+                    <button type="submit">Accedi</button>
+                <!-- Chiude l’elemento form. -->
+                </form>
+                <!-- Apre un paragrafo di testo. -->
+                <p id="messaggio-errore"></p>
+                <!-- Apre un paragrafo di testo. -->
+                <p class="registration-link">
+                <!-- Mostra questo testo all’utente. -->
+                Non hai un account?
+                <!-- Crea un collegamento alla pagina registrazione.html. -->
+                <a href="registrazione.html">Registrati</a>
+            <!-- Chiude l’elemento p. -->
+            </p>
+        <!-- Chiude l’elemento section. -->
+        </section>
+    <!-- Chiude l’elemento main. -->
+    </main>
+    <!-- Carica il file JavaScript js/storage.js. -->
+    <script src="js/storage.js"></script>
+    <!-- Carica il file JavaScript js/autenticazione.js. -->
+    <script src="js/autenticazione.js"></script>
+<!-- Chiude il contenuto visibile della pagina. -->
+</body>
+<!-- Chiude il documento HTML. -->
+</html>

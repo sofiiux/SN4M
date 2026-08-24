@@ -1,0 +1,99 @@
+<!-- Indica che il documento usa HTML5. -->
+<!DOCTYPE html>
+<!-- Apre il documento HTML e imposta la lingua italiana. -->
+<html lang="it">
+    <!-- Apre la parte con le informazioni della pagina. -->
+    <head>
+        <!-- Imposta la codifica UTF-8 per i caratteri. -->
+        <meta charset="UTF-8">
+        <!-- Adatta la pagina alla larghezza del dispositivo. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Imposta il titolo mostrato nella scheda del browser. -->
+        <title>SN4M - Registrazione</title>
+        <!-- Collega il foglio di stile css/style.css. -->
+        <link rel="stylesheet" href="css/style.css">
+    <!-- Chiude la parte delle informazioni della pagina. -->
+    </head>
+    <!-- Apre il contenuto visibile della pagina. -->
+    <body>
+        <!-- Apre il contenuto principale della pagina. -->
+        <main class="registration-page">
+            <!-- Apre una sezione della pagina. -->
+            <section class="registration-card">
+                <!-- Mostra un titolo nella pagina. -->
+                <h1>SN4M</h1>
+                <!-- Apre un paragrafo di testo. -->
+                <p class="subtitle">Social Network for Music</p>
+                <!-- Mostra un titolo nella pagina. -->
+                <h2>Crea il tuo account</h2>
+                <!-- Apre il form registration-form. -->
+                <form id="registration-form">
+                    <!-- Apre un contenitore con classe form-group. -->
+                    <div class="form-group">
+                        <!-- Crea l’etichetta del campo username. -->
+                        <label for="username">Nome utente</label>
+                        <!-- Crea un campo text con id username. -->
+                        <input type="text" id="username" name="username" placeholder="Inserisci il nome utente" required >
+                    <!-- Chiude l’elemento div. -->
+                    </div>
+                    <!-- Apre un contenitore con classe form-group. -->
+                    <div class="form-group">
+                        <!-- Crea l’etichetta del campo email. -->
+                        <label for="email">Email</label>
+                        <!-- Crea un campo email con id email. -->
+                        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required >
+                    <!-- Chiude l’elemento div. -->
+                    </div>
+                    <!-- Apre un contenitore con classe form-group. -->
+                    <div class="form-group">
+                        <!-- Crea l’etichetta del campo password. -->
+                        <label for="password">Password</label>
+                        <!-- Crea un campo password con id password. -->
+                        <input type="password" id="password" name="password" placeholder="Inserisci una password" required >
+                    <!-- Chiude l’elemento div. -->
+                    </div>
+                    <!-- Apre un contenitore con classe form-group. -->
+                    <div class="form-group">
+                        <!-- Crea l’etichetta del campo musical-preferences. -->
+                        <label for="musical-preferences">Preferenze musicali</label>
+                        <!-- Crea un campo text con id musical-preferences. -->
+                        <!-- Mantiene le preferenze selezionate in un campo nascosto. -->
+                        <input type="hidden" id="musical-preferences" name="musical-preferences" required>
+                        <!-- Mostra i generi musicali come pulsanti selezionabili. -->
+                        <div class="genre-selector" data-genre-input="musical-preferences"></div>
+                    <!-- Chiude l’elemento div. -->
+                    </div>
+                    <!-- Apre un contenitore con classe form-group. -->
+                    <div class="form-group">
+                        <!-- Crea l’etichetta del campo favorite-artists. -->
+                        <label for="favorite-artists">Artisti o gruppi preferiti</label>
+                        <!-- Crea un campo text con id favorite-artists. -->
+                        <input type="text" id="favorite-artists" name="favorite-artists" placeholder="Es. Queen, Coldplay" required >
+                    <!-- Chiude l’elemento div. -->
+                    </div>
+                    <!-- Crea un pulsante di tipo submit. -->
+                    <button type="submit">Registrati</button>
+                <!-- Chiude l’elemento form. -->
+                </form>
+                <!-- Apre un paragrafo di testo. -->
+                <p id="registration-message"></p>
+                <!-- Apre un paragrafo di testo. -->
+                <p class="login-link">
+                <!-- Mostra questo testo all’utente. -->
+                Hai già un account?
+                <!-- Crea un collegamento alla pagina index.html. -->
+                <a href="index.html">Accedi</a>
+            <!-- Chiude l’elemento p. -->
+            </p>
+        <!-- Chiude l’elemento section. -->
+        </section>
+    <!-- Chiude l’elemento main. -->
+    </main>
+    <!-- Carica il file JavaScript js/storage.js. -->
+    <script src="js/storage.js"></script>
+    <!-- Carica il file JavaScript js/autenticazione.js. -->
+    <script src="js/autenticazione.js"></script>
+<!-- Chiude il contenuto visibile della pagina. -->
+</body>
+<!-- Chiude il documento HTML. -->
+</html>

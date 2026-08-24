@@ -1,0 +1,274 @@
+<!-- Indica che il documento utilizza HTML5. -->
+<!DOCTYPE html>
+
+<!-- Apre il documento HTML e imposta la lingua italiana. -->
+<html lang="it">
+
+<head>
+
+    <!-- Imposta la codifica dei caratteri. -->
+    <meta charset="UTF-8">
+
+    <!-- Adatta la pagina alle dimensioni dello schermo. -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Imposta il titolo della scheda del browser. -->
+    <title>SN4M - Il mio profilo</title>
+
+    <!-- Collega il foglio di stile generale. -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Collega il foglio di stile del layout. -->
+    <link
+        rel="stylesheet"
+        href="css/layout.css"
+    >
+
+    <!-- Collega il foglio di stile della pagina Profilo. -->
+    <link
+        rel="stylesheet"
+        href="css/profilo.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- Apre la barra superiore dell'applicazione. -->
+    <header class="main-header">
+
+        <!-- Crea il collegamento del logo. -->
+        <a
+            href="ricerca.html"
+            class="header-logo"
+        >
+
+            <!-- Mostra il nome dell'applicazione. -->
+            SN4M
+
+        </a>
+
+        <!-- Apre il menu di navigazione. -->
+        <nav class="header-menu">
+
+            <!-- Collegamento alla ricerca. -->
+            <a href="ricerca.html">
+                Ricerca brani
+            </a>
+
+            <!-- Collegamento alle playlist. -->
+            <a href="playlist.html">
+                Playlist
+            </a>
+
+            <!-- Collegamento alle comunità. -->
+            <a href="comunita.html">
+                Comunità
+            </a>
+
+            <!-- Collegamento alle condivisioni. -->
+            <a href="condivisioni.html">
+                Condivisioni
+            </a>
+
+        </nav>
+
+        <!-- Apre il contenitore del profilo. -->
+        <div class="header-profile">
+
+            <!-- Apre il menu del profilo. -->
+            <div class="profile-menu">
+
+                <!-- Crea il pulsante circolare del profilo. -->
+                <button
+                    type="button"
+                    id="profile-menu-button"
+                    class="profile-menu-button"
+                >
+                    U
+                </button>
+
+                <!-- Apre la tendina del profilo. -->
+                <div
+                    id="profile-dropdown"
+                    class="profile-dropdown"
+                >
+
+                    <!-- Mostra il nome dell'utente. -->
+                    <strong id="profile-menu-username">
+                        Utente
+                    </strong>
+
+                    <!-- Mostra l'email dell'utente. -->
+                    <p id="profile-menu-email"></p>
+
+                    <!-- Collegamento al profilo. -->
+                    <a
+                        href="profilo.html"
+                        class="profile-dropdown-link"
+                    >
+                        Modifica profilo
+                    </a>
+
+                    <!-- Pulsante Logout. -->
+                    <button
+                        type="button"
+                        id="profile-logout-button"
+                        class="profile-dropdown-logout"
+                    >
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Apre il layout principale. -->
+    <div class="app-layout">
+
+        <!-- Apre il contenuto principale. -->
+        <main class="main-content profile-main">
+
+            <!-- Apre l'intestazione della pagina. -->
+            <header class="profile-header">
+
+                <!-- Mostra il titolo della pagina. -->
+                <h1>
+                    Il mio profilo
+                </h1>
+
+                <!-- Mostra la descrizione della pagina. -->
+                <p class="page-description">
+                    Gestisci le informazioni del tuo account e le tue preferenze musicali.
+                </p>
+
+            </header>
+
+
+            <!-- Apre il riquadro principale dell'account. -->
+            <section class="profile-card">
+
+                <!-- Mostra il titolo della sezione. -->
+                <h2>
+                    Account
+                </h2>
+
+                <!-- Apre il form del profilo. -->
+                <form id="profile-form">
+
+                    <!-- Apre il gruppo Username. -->
+                    <div class="form-group">
+
+                        <!-- Etichetta Username. -->
+                        <label for="profile-username">
+                            Username
+                        </label>
+
+                        <!-- Campo Username. -->
+                        <input
+                            type="text"
+                            id="profile-username"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Apre il gruppo Email. -->
+                    <div class="form-group">
+
+                        <!-- Etichetta Email. -->
+                        <label for="profile-email">
+                            Email
+                        </label>
+
+                        <!-- Campo Email. -->
+                        <input
+                            type="email"
+                            id="profile-email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Apre il gruppo delle preferenze musicali. -->
+                    <div class="form-group">
+
+                        <!-- Mostra l'etichetta delle preferenze. -->
+                        <label for="profile-preferences">
+                            Preferenze musicali
+                        </label>
+
+                        <!-- Campo nascosto contenente le preferenze selezionate. -->
+                        <input
+                            type="hidden"
+                            id="profile-preferences"
+                        >
+
+                        <!-- Contenitore dei pulsanti dei generi. -->
+                        <div
+                            class="genre-selector"
+                            data-genre-input="profile-preferences"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- Contenitore del pulsante Salva. -->
+                    <div class="profile-save-area">
+
+                        <!-- Pulsante Salva modifiche. -->
+                        <button
+                            type="submit"
+                            class="page-button"
+                        >
+                            Salva modifiche
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- Crea semplicemente il pulsante Elimina account senza un altro riquadro. -->
+            <div class="delete-account-area">
+
+                <!-- Pulsante Elimina account. -->
+                <button
+                    type="button"
+                    id="delete-account-button"
+                    class="page-button danger-button"
+                >
+                    Elimina account
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Collega le funzioni generali di gestione dei dati. -->
+    <script src="js/storage.js"></script>
+
+    <!-- Collega lo script del profilo. -->
+    <script src="js/profilo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!-- Indica che il documento utilizza HTML5. -->
+<!DOCTYPE html>
+
+<!-- Apre il documento HTML e imposta la lingua italiana. -->
+<html lang="it">
+
+<!-- Apre la sezione contenente le informazioni della pagina. -->
+<head>
+
+    <!-- Imposta la codifica dei caratteri UTF-8. -->
+    <meta charset="UTF-8">
+
+    <!-- Adatta la pagina alle dimensioni dello schermo. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Imposta il titolo mostrato nella scheda del browser. -->
+    <title>SN4M - Ricerca brani</title>
+
+    <!-- Collega il foglio di stile generale. -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Collega il foglio di stile del layout. -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- Collega il foglio di stile della pagina Ricerca. -->
+    <link rel="stylesheet" href="css/ricerca.css">
+
+<!-- Chiude la sezione contenente le informazioni della pagina. -->
+</head>
+
+<!-- Apre il contenuto visibile della pagina. -->
+<body>
+
+    <!-- Apre la barra superiore dell'applicazione. -->
+    <header class="main-header">
+
+        <!-- Crea il collegamento del logo alla pagina di ricerca. -->
+        <a href="ricerca.html" class="header-logo">
+
+            <!-- Mostra il nome dell'applicazione. -->
+            SN4M
+
+        <!-- Chiude il collegamento del logo. -->
+        </a>
+
+        <!-- Apre il menu di navigazione principale. -->
+        <nav class="header-menu">
+
+            <!-- Crea il collegamento alla pagina Ricerca brani e lo indica come attivo. -->
+            <a href="ricerca.html" class="active">
+
+                <!-- Mostra il nome della pagina Ricerca brani. -->
+                Ricerca brani
+
+            <!-- Chiude il collegamento alla pagina Ricerca brani. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Playlist. -->
+            <a href="playlist.html">
+
+                <!-- Mostra il nome della pagina Playlist. -->
+                Playlist
+
+            <!-- Chiude il collegamento alla pagina Playlist. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Comunità. -->
+            <a href="comunita.html">
+
+                <!-- Mostra il nome della pagina Comunità. -->
+                Comunità
+
+            <!-- Chiude il collegamento alla pagina Comunità. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Condivisioni. -->
+            <a href="condivisioni.html">
+
+                <!-- Mostra il nome della pagina Condivisioni. -->
+                Condivisioni
+
+            <!-- Chiude il collegamento alla pagina Condivisioni. -->
+            </a>
+
+        <!-- Chiude il menu di navigazione principale. -->
+        </nav>
+
+        <!-- Apre il contenitore del profilo nella barra superiore. -->
+        <div class="header-profile">
+
+            <!-- Apre il contenitore del menu del profilo. -->
+            <div class="profile-menu">
+
+                <!-- Crea il pulsante circolare che apre il menu del profilo. -->
+                <button
+                    type="button"
+                    id="profile-menu-button"
+                    class="profile-menu-button"
+                >
+
+                    <!-- Mostra temporaneamente la lettera U nel pulsante del profilo. -->
+                    U
+
+                <!-- Chiude il pulsante del profilo. -->
+                </button>
+
+                <!-- Apre la tendina contenente le informazioni del profilo. -->
+                <div
+                    id="profile-dropdown"
+                    class="profile-dropdown"
+                >
+
+                    <!-- Mostra il nome dell'utente nella tendina. -->
+                    <strong id="profile-menu-username">
+
+                        <!-- Mostra temporaneamente la scritta Utente. -->
+                        Utente
+
+                    <!-- Chiude l'elemento contenente il nome dell'utente. -->
+                    </strong>
+
+                    <!-- Crea l'elemento in cui viene mostrata l'email dell'utente. -->
+                    <p id="profile-menu-email"></p>
+
+                    <!-- Crea il collegamento alla pagina del profilo. -->
+                    <a
+                        href="profilo.html"
+                        class="profile-dropdown-link"
+                    >
+
+                        <!-- Mostra il testo del collegamento al profilo. -->
+                        Modifica profilo
+
+                    <!-- Chiude il collegamento alla pagina del profilo. -->
+                    </a>
+
+                    <!-- Crea il pulsante per effettuare il logout. -->
+                    <button
+                        type="button"
+                        id="profile-logout-button"
+                        class="profile-dropdown-logout"
+                    >
+
+                        <!-- Mostra il testo del pulsante Logout. -->
+                        Logout
+
+                    <!-- Chiude il pulsante Logout. -->
+                    </button>
+
+                <!-- Chiude la tendina del profilo. -->
+                </div>
+
+            <!-- Chiude il contenitore del menu del profilo. -->
+            </div>
+
+        <!-- Chiude il contenitore del profilo. -->
+        </div>
+
+    <!-- Chiude la barra superiore dell'applicazione. -->
+    </header>
+
+    <!-- Apre il contenitore generale del layout. -->
+    <div class="app-layout">
+
+        <!-- Apre il contenuto principale della pagina Ricerca. -->
+        <main class="main-content search-main">
+
+            <!-- Apre l'intestazione della pagina Ricerca. -->
+            <header class="topbar search-header">
+
+                <!-- Apre il contenitore del titolo e della descrizione. -->
+                <div>
+
+                    <!-- Apre il titolo principale della pagina. -->
+                    <h1>
+
+                        <!-- Mostra il titolo della pagina. -->
+                        Ricerca brani
+
+                    <!-- Chiude il titolo principale della pagina. -->
+                    </h1>
+
+                    <!-- Apre la descrizione della pagina. -->
+                    <p class="page-description">
+
+                        <!-- Spiega la funzione principale della pagina. -->
+                        Cerca brani su Spotify e aggiungili alle tue playlist.
+
+                    <!-- Chiude la descrizione della pagina. -->
+                    </p>
+
+                <!-- Chiude il contenitore del titolo e della descrizione. -->
+                </div>
+
+            <!-- Chiude l'intestazione della pagina Ricerca. -->
+            </header>
+
+            <!-- Apre la riga dedicata al collegamento con Spotify. -->
+            <section class="spotify-status-row">
+
+                <!-- Mostra lo stato del collegamento con Spotify. -->
+                <p
+                    id="spotify-status"
+                    class="page-description"
+                >
+
+                    <!-- Mostra lo stato iniziale del collegamento. -->
+                    Collega Spotify per cercare i brani.
+
+                <!-- Chiude il testo dello stato Spotify. -->
+                </p>
+
+                <!-- Crea il pulsante utilizzato per collegare Spotify. -->
+                <button
+                    type="button"
+                    id="spotify-login-button"
+                    class="page-button"
+                >
+
+                    <!-- Mostra il testo del pulsante Spotify. -->
+                    Collega Spotify
+
+                <!-- Chiude il pulsante Spotify. -->
+                </button>
+
+            <!-- Chiude la riga dedicata al collegamento con Spotify. -->
+            </section>
+
+            <!-- Apre la sezione utilizzata per cercare i brani. -->
+            <section class="search-section">
+
+                <!-- Crea l'etichetta del campo di ricerca. -->
+                <label for="search-input">
+
+                    <!-- Mostra il testo dell'etichetta. -->
+                    Cerca un brano
+
+                <!-- Chiude l'etichetta del campo di ricerca. -->
+                </label>
+
+                <!-- Apre il form utilizzato per effettuare la ricerca. -->
+                <form
+                    id="search-form"
+                    class="search-controls"
+                >
+
+                    <!-- Crea il campo in cui inserire titolo o artista. -->
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Titolo o artista"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <!-- Crea il pulsante per avviare la ricerca. -->
+                    <button
+                        type="submit"
+                        class="page-button"
+                    >
+
+                        <!-- Mostra il testo del pulsante di ricerca. -->
+                        Cerca
+
+                    <!-- Chiude il pulsante di ricerca. -->
+                    </button>
+
+                <!-- Chiude il form di ricerca. -->
+                </form>
+
+            <!-- Chiude la sezione utilizzata per cercare i brani. -->
+            </section>
+
+            <!-- Apre la sezione contenente i risultati della ricerca. -->
+            <section
+                id="results-section"
+                class="results-section"
+            >
+
+                <!-- Crea il contenitore in cui JavaScript inserisce i risultati Spotify. -->
+                <div id="search-results"></div>
+
+            <!-- Chiude la sezione dei risultati. -->
+            </section>
+
+        <!-- Chiude il contenuto principale della pagina Ricerca. -->
+        </main>
+
+    <!-- Chiude il contenitore generale del layout. -->
+    </div>
+
+    <!-- Collega il file JavaScript contenente le funzioni comuni. -->
+    <script src="js/storage.js"></script>
+
+    <!-- Collega il file JavaScript contenente il collegamento a Spotify. -->
+    <script src="js/spotify.js"></script>
+
+    <!-- Collega il file JavaScript contenente la logica della ricerca. -->
+    <script src="js/ricerca.js"></script>
+
+<!-- Chiude il contenuto visibile della pagina. -->
+</body>
+
+<!-- Chiude il documento HTML. -->
+</html>

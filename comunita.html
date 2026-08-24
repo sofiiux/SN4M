@@ -1,0 +1,430 @@
+<!-- Indica che il documento utilizza HTML5. -->
+<!DOCTYPE html>
+
+<!-- Apre il documento HTML e imposta la lingua italiana. -->
+<html lang="it">
+
+<!-- Apre la sezione contenente le informazioni della pagina. -->
+<head>
+
+    <!-- Imposta la codifica dei caratteri UTF-8. -->
+    <meta charset="UTF-8">
+
+    <!-- Adatta la pagina alle dimensioni dello schermo. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Imposta il titolo mostrato nella scheda del browser. -->
+    <title>SN4M - Comunità</title>
+
+    <!-- Collega il foglio di stile generale. -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Collega il foglio di stile del layout. -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- Collega il foglio di stile della pagina Comunità. -->
+    <link rel="stylesheet" href="css/comunita.css">
+
+<!-- Chiude la sezione contenente le informazioni della pagina. -->
+</head>
+
+<!-- Apre il contenuto visibile della pagina. -->
+<body>
+
+    <!-- Apre la barra superiore dell'applicazione. -->
+    <header class="main-header">
+
+        <!-- Crea il collegamento del logo alla pagina di ricerca. -->
+        <a href="ricerca.html" class="header-logo">
+
+            <!-- Mostra il nome dell'applicazione. -->
+            SN4M
+
+        <!-- Chiude il collegamento del logo. -->
+        </a>
+
+        <!-- Apre il menu di navigazione principale. -->
+        <nav class="header-menu">
+
+            <!-- Crea il collegamento alla pagina Ricerca brani. -->
+            <a href="ricerca.html">
+
+                <!-- Mostra il nome della pagina Ricerca brani. -->
+                Ricerca brani
+
+            <!-- Chiude il collegamento alla pagina Ricerca brani. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Playlist. -->
+            <a href="playlist.html">
+
+                <!-- Mostra il nome della pagina Playlist. -->
+                Playlist
+
+            <!-- Chiude il collegamento alla pagina Playlist. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Comunità e lo indica come attivo. -->
+            <a href="comunita.html" class="active">
+
+                <!-- Mostra il nome della pagina Comunità. -->
+                Comunità
+
+            <!-- Chiude il collegamento alla pagina Comunità. -->
+            </a>
+
+            <!-- Crea il collegamento alla pagina Condivisioni. -->
+            <a href="condivisioni.html">
+
+                <!-- Mostra il nome della pagina Condivisioni. -->
+                Condivisioni
+
+            <!-- Chiude il collegamento alla pagina Condivisioni. -->
+            </a>
+
+        <!-- Chiude il menu di navigazione principale. -->
+        </nav>
+
+        <!-- Apre il contenitore del profilo nella barra superiore. -->
+        <div class="header-profile">
+
+            <!-- Apre il contenitore del menu del profilo. -->
+            <div class="profile-menu">
+
+                <!-- Crea il pulsante circolare che apre il menu del profilo. -->
+                <button
+                    type="button"
+                    id="profile-menu-button"
+                    class="profile-menu-button"
+                >
+
+                    <!-- Mostra temporaneamente la lettera U nel pulsante del profilo. -->
+                    U
+
+                <!-- Chiude il pulsante del profilo. -->
+                </button>
+
+                <!-- Apre la tendina contenente le informazioni del profilo. -->
+                <div
+                    id="profile-dropdown"
+                    class="profile-dropdown"
+                >
+
+                    <!-- Mostra il nome dell'utente nella tendina. -->
+                    <strong id="profile-menu-username">
+
+                        <!-- Mostra temporaneamente la scritta Utente. -->
+                        Utente
+
+                    <!-- Chiude l'elemento contenente il nome dell'utente. -->
+                    </strong>
+
+                    <!-- Crea l'elemento in cui viene mostrata l'email dell'utente. -->
+                    <p id="profile-menu-email"></p>
+
+                    <!-- Crea il collegamento alla pagina del profilo. -->
+                    <a
+                        href="profilo.html"
+                        class="profile-dropdown-link"
+                    >
+
+                        <!-- Mostra il testo del collegamento al profilo. -->
+                        Modifica profilo
+
+                    <!-- Chiude il collegamento alla pagina del profilo. -->
+                    </a>
+
+                    <!-- Crea il pulsante per effettuare il logout. -->
+                    <button
+                        type="button"
+                        id="profile-logout-button"
+                        class="profile-dropdown-logout"
+                    >
+
+                        <!-- Mostra il testo del pulsante Logout. -->
+                        Logout
+
+                    <!-- Chiude il pulsante Logout. -->
+                    </button>
+
+                <!-- Chiude la tendina del profilo. -->
+                </div>
+
+            <!-- Chiude il contenitore del menu del profilo. -->
+            </div>
+
+        <!-- Chiude il contenitore del profilo. -->
+        </div>
+
+    <!-- Chiude la barra superiore dell'applicazione. -->
+    </header>
+
+    <!-- Apre il contenitore generale del layout dell'applicazione. -->
+    <div class="app-layout">
+
+        <!-- Apre il contenuto principale della pagina Comunità. -->
+        <main class="main-content community-main">
+
+            <!-- Apre l'intestazione della pagina Comunità. -->
+            <header class="topbar community-header">
+
+                <!-- Apre il contenitore del titolo e della descrizione. -->
+                <div>
+
+                    <!-- Apre il titolo principale della pagina. -->
+                    <h1>
+
+                        <!-- Mostra il titolo della pagina. -->
+                        Comunità musicali
+
+                    <!-- Chiude il titolo principale della pagina. -->
+                    </h1>
+
+                    <!-- Apre la descrizione della pagina. -->
+                    <p class="page-description">
+
+                        <!-- Mostra la descrizione della pagina Comunità. -->
+                        Crea, cerca e gestisci le comunità musicali.
+
+                    <!-- Chiude la descrizione della pagina. -->
+                    </p>
+
+                    <!-- Crea il pulsante per aprire il form di una nuova comunità. -->
+                    <button
+                        type="button"
+                        id="new-community-button"
+                        class="page-button"
+                    >
+
+                        <!-- Mostra il testo del pulsante. -->
+                        + Crea comunità
+
+                    <!-- Chiude il pulsante per creare una comunità. -->
+                    </button>
+
+                <!-- Chiude il contenitore del titolo e della descrizione. -->
+                </div>
+
+            <!-- Chiude l'intestazione della pagina Comunità. -->
+            </header>
+
+            <!-- Apre la sezione contenente il form per creare o modificare una comunità. -->
+            <section
+                id="community-form-section"
+                class="content-card community-form-section"
+            >
+
+                <!-- Apre il titolo del form. -->
+                <h2 id="community-form-title">
+
+                    <!-- Mostra il titolo iniziale del form. -->
+                    Nuova comunità
+
+                <!-- Chiude il titolo del form. -->
+                </h2>
+
+                <!-- Apre il form utilizzato per creare o modificare una comunità. -->
+                <form id="community-form">
+
+                    <!-- Crea il campo nascosto che contiene l'identificativo della comunità. -->
+                    <input
+                        type="hidden"
+                        id="community-id"
+                    >
+
+                    <!-- Apre il gruppo del campo Nome. -->
+                    <div class="form-group">
+
+                        <!-- Crea l'etichetta del campo Nome. -->
+                        <label for="community-name">
+
+                            <!-- Mostra il nome del campo. -->
+                            Nome
+
+                        <!-- Chiude l'etichetta del campo Nome. -->
+                        </label>
+
+                        <!-- Crea il campo in cui inserire il nome della comunità. -->
+                        <input
+                            type="text"
+                            id="community-name"
+                            required
+                        >
+
+                    <!-- Chiude il gruppo del campo Nome. -->
+                    </div>
+
+                    <!-- Apre il gruppo del campo Descrizione. -->
+                    <div class="form-group">
+
+                        <!-- Crea l'etichetta del campo Descrizione. -->
+                        <label for="community-description">
+
+                            <!-- Mostra il nome del campo. -->
+                            Descrizione
+
+                        <!-- Chiude l'etichetta del campo Descrizione. -->
+                        </label>
+
+                        <!-- Crea l'area di testo in cui inserire la descrizione della comunità. -->
+                        <textarea
+                            id="community-description"
+                            rows="4"
+                            required
+                        ></textarea>
+
+                    <!-- Chiude il gruppo del campo Descrizione. -->
+                    </div>
+
+                    <!-- Apre il gruppo utilizzato per selezionare i generi musicali. -->
+                    <div class="form-group">
+
+                        <!-- Crea l'etichetta dei generi musicali. -->
+                        <label for="community-tags">
+
+                            <!-- Mostra il nome del campo. -->
+                            Tag
+
+                        <!-- Chiude l'etichetta dei generi musicali. -->
+                        </label>
+
+                        <!-- Crea il campo nascosto in cui vengono memorizzati i generi selezionati. -->
+                        <input
+                            type="hidden"
+                            id="community-tags"
+                            required
+                        >
+
+                        <!-- Crea il contenitore in cui JavaScript inserisce i pulsanti dei generi musicali. -->
+                        <div
+                            class="genre-selector"
+                            data-genre-input="community-tags"
+                        ></div>
+
+                    <!-- Chiude il gruppo dei generi musicali. -->
+                    </div>
+
+                    <!-- Apre il contenitore dei pulsanti del form. -->
+                    <div class="form-actions">
+
+                        <!-- Crea il pulsante per salvare la comunità. -->
+                        <button
+                            type="submit"
+                            class="page-button"
+                        >
+
+                            <!-- Mostra il testo del pulsante di salvataggio. -->
+                            Salva comunità
+
+                        <!-- Chiude il pulsante di salvataggio. -->
+                        </button>
+
+                        <!-- Crea il pulsante per annullare la creazione o modifica. -->
+                        <button
+                            type="button"
+                            id="cancel-community-button"
+                            class="page-button secondary-button"
+                        >
+
+                            <!-- Mostra il testo del pulsante Annulla. -->
+                            Annulla
+
+                        <!-- Chiude il pulsante Annulla. -->
+                        </button>
+
+                    <!-- Chiude il contenitore dei pulsanti del form. -->
+                    </div>
+
+                <!-- Chiude il form della comunità. -->
+                </form>
+
+            <!-- Chiude la sezione contenente il form della comunità. -->
+            </section>
+
+            <!-- Apre la sezione utilizzata per cercare le comunità. -->
+            <section class="community-search">
+
+                <!-- Apre il form utilizzato per cercare una comunità. -->
+                <form id="community-search-form">
+
+                    <!-- Crea il campo utilizzato per cercare una comunità. -->
+                    <input
+                        type="text"
+                        id="community-search-input"
+                        placeholder="Cerca una comunità"
+                    >
+
+                    <!-- Crea il pulsante per avviare la ricerca. -->
+                    <button
+                        type="submit"
+                        class="page-button"
+                    >
+
+                        <!-- Mostra il testo del pulsante di ricerca. -->
+                        Cerca
+
+                    <!-- Chiude il pulsante di ricerca. -->
+                    </button>
+
+                <!-- Chiude il form di ricerca. -->
+                </form>
+
+            <!-- Chiude la sezione utilizzata per cercare le comunità. -->
+            </section>
+
+            <!-- Apre la sezione contenente l'elenco delle comunità. -->
+            <section class="community-section">
+
+                <!-- Apre il contenitore in cui vengono mostrate le comunità. -->
+                <div
+                    id="community-list"
+                    class="community-grid"
+                >
+
+                    <!-- Apre lo stato vuoto mostrato quando non sono presenti comunità. -->
+                    <div class="community-empty-state">
+
+                        <!-- Apre il contenitore dell'icona. -->
+                        <div class="community-empty-icon">
+
+                            <!-- Mostra l'icona della comunità. -->
+                            ♫
+
+                        <!-- Chiude il contenitore dell'icona. -->
+                        </div>
+
+                        <!-- Apre il titolo dello stato vuoto. -->
+                        <h3>
+
+                            <!-- Informa l'utente che non sono presenti comunità. -->
+                            Nessuna comunità disponibile
+
+                        <!-- Chiude il titolo dello stato vuoto. -->
+                        </h3>
+
+                    <!-- Chiude lo stato vuoto. -->
+                    </div>
+
+                <!-- Chiude il contenitore delle comunità. -->
+                </div>
+
+            <!-- Chiude la sezione contenente le comunità. -->
+            </section>
+
+        <!-- Chiude il contenuto principale della pagina Comunità. -->
+        </main>
+
+    <!-- Chiude il contenitore generale del layout. -->
+    </div>
+
+    <!-- Collega il file JavaScript contenente le funzioni comuni e la gestione dei dati. -->
+    <script src="js/storage.js"></script>
+
+    <!-- Collega il file JavaScript contenente la logica della pagina Comunità. -->
+    <script src="js/comunita.js"></script>
+
+<!-- Chiude il contenuto visibile della pagina. -->
+</body>
+
+<!-- Chiude il documento HTML. -->
+</html>

@@ -1,0 +1,550 @@
+/* CONTENUTO DELLA PAGINA COMUNITÀ */
+
+/* Imposta la pagina Comunità con la stessa larghezza delle altre pagine. */
+.community-main {
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+}
+
+/* INTESTAZIONE DELLA PAGINA */
+
+/* Imposta l'intestazione reale della pagina Comunità in verticale. */
+.community-header {
+    /* Mostra titolo, sottotitolo e pulsante uno sotto l'altro. */
+    display: block;
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta lo spazio sotto l'intestazione. */
+    margin-bottom: 30px;
+}
+
+/* Mantiene il contenitore dell'intestazione senza larghezze rigide. */
+.community-header > div {
+    /* Occupa la larghezza disponibile. */
+    width: 100%;
+}
+
+/* Elimina margini inutili dal titolo principale. */
+.community-header h1 {
+    /* Imposta il margine inferiore del titolo. */
+    margin: 0 0 8px;
+}
+
+/* Imposta il sottotitolo della pagina. */
+.community-header .page-description {
+    /* Elimina i margini automatici. */
+    margin: 0;
+}
+
+/* Intestazione della pagina Comunità. */
+.community-page-header {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Allinea gli elementi nella parte superiore. */
+    align-items: flex-start;
+    /* Posiziona gli elementi partendo da sinistra. */
+    justify-content: flex-start;
+    /* Imposta la distanza tra titolo e pulsante. */
+    gap: 40px;
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta lo spazio sotto l'intestazione. */
+    margin-bottom: 30px;
+}
+
+/* Contenitore del titolo e della descrizione. */
+.community-page-title {
+    /* Imposta una larghezza controllata. */
+    width: 320px;
+    /* Impedisce al contenitore di restringersi. */
+    flex-shrink: 0;
+}
+
+/* Titolo principale. */
+.community-page-title h1 {
+    /* Elimina il margine superiore. */
+    margin: 0 0 8px;
+    /* Mantiene il titolo su una sola riga. */
+    white-space: nowrap;
+}
+
+/* Descrizione della pagina. */
+.community-page-title .page-description {
+    /* Elimina i margini automatici. */
+    margin: 0;
+}
+
+/* Pulsante Nuova comunità. */
+#new-community-button {
+    /* Imposta lo stesso spazio interno di Nuova playlist. */
+    padding: 11px 22px;
+    /* Rende il pulsante arrotondato. */
+    border-radius: 999px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 700;
+    /* Impedisce al pulsante di restringersi. */
+    flex-shrink: 0;
+    /* Lascia spazio tra il sottotitolo e il pulsante. */
+    margin-top: 22px;
+}
+
+/* RICERCA DELLE COMUNITÀ */
+
+/* Contenitore della ricerca. */
+.community-search {
+    /* Imposta lo spazio sotto la ricerca. */
+    margin-bottom: 34px;
+}
+
+/* Form della ricerca. */
+#community-search-form {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Imposta lo spazio tra campo e pulsante. */
+    gap: 12px;
+    /* Imposta la stessa larghezza massima delle schede. */
+    max-width: 1000px;
+}
+
+/* Campo di ricerca. */
+#community-search-input {
+    /* Occupa lo spazio disponibile. */
+    flex: 1;
+    /* Imposta lo spazio interno. */
+    padding: 13px 15px;
+    /* Imposta il bordo. */
+    border: 1px solid #444444;
+    /* Arrotonda gli angoli. */
+    border-radius: 12px;
+    /* Imposta lo sfondo. */
+    background: #2c2c2e;
+    /* Imposta il colore del testo. */
+    color: white;
+    /* Rimuove il bordo automatico del browser. */
+    outline: none;
+}
+
+/* Campo di ricerca selezionato. */
+#community-search-input:focus {
+    /* Evidenzia il bordo in verde. */
+    border-color: #1ed760;
+}
+
+/* FORM COMUNITÀ */
+
+/* Form per creare o modificare una comunità. */
+.community-form-section {
+    /* Imposta la larghezza massima. */
+    max-width: 700px;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 36px;
+}
+
+/* Gruppi dei campi. */
+.community-form-section .form-group {
+    /* Imposta lo spazio sotto ogni campo. */
+    margin-bottom: 18px;
+}
+
+/* Etichette dei campi. */
+.community-form-section label {
+    /* Mostra l'etichetta su una riga separata. */
+    display: block;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 8px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 600;
+}
+
+/* Campi del form. */
+.community-form-section input,
+.community-form-section textarea {
+    /* Occupa tutta la larghezza. */
+    width: 100%;
+    /* Imposta lo spazio interno. */
+    padding: 13px 14px;
+    /* Imposta il bordo. */
+    border: 1px solid #444444;
+    /* Arrotonda gli angoli. */
+    border-radius: 10px;
+    /* Imposta lo sfondo. */
+    background: #242426;
+    /* Imposta il colore del testo. */
+    color: white;
+    /* Rimuove il bordo automatico. */
+    outline: none;
+}
+
+/* Campi selezionati. */
+.community-form-section input:focus,
+.community-form-section textarea:focus {
+    /* Evidenzia il bordo. */
+    border-color: #1ed760;
+}
+
+/* SEZIONE DELLE COMUNITÀ */
+
+/* Contenitore generale. */
+.community-section {
+    /* Occupa tutta la larghezza. */
+    width: 100%;
+}
+
+/* Titolo Comunità disponibili. */
+.community-section > h2 {
+    /* Elimina il margine superiore. */
+    margin-top: 0;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 20px;
+    /* Imposta la dimensione. */
+    font-size: 24px;
+}
+
+/* Griglia delle comunità. */
+.community-grid {
+    /* Utilizza una griglia. */
+    display: grid;
+    /* Crea una singola colonna come nelle playlist. */
+    grid-template-columns: minmax(700px, 1000px);
+    /* Imposta lo spazio tra le schede. */
+    gap: 14px;
+    /* Mantiene le schede allineate a sinistra. */
+    justify-content: start;
+}
+
+/* SINGOLA COMUNITÀ */
+
+/* Scheda della comunità. */
+.community-card {
+    /* Utilizza Flexbox come le playlist. */
+    display: flex;
+    /* Mantiene tutti gli elementi sulla stessa riga. */
+    flex-direction: row;
+    /* Centra verticalmente gli elementi. */
+    align-items: center;
+    /* Imposta lo stesso spazio delle playlist. */
+    gap: 28px;
+    /* Occupa tutta la larghezza disponibile. */
+    width: 100%;
+    /* Imposta lo stesso spazio interno delle playlist. */
+    padding: 18px 22px;
+    /* Imposta lo sfondo. */
+    background: #1c1c1e;
+    /* Imposta il bordo. */
+    border: 1px solid #333336;
+    /* Arrotonda gli angoli. */
+    border-radius: 16px;
+    /* Include padding e bordo nella larghezza. */
+    box-sizing: border-box;
+}
+
+/* Titolo della comunità. */
+.community-card h3 {
+    /* Imposta la stessa larghezza del titolo delle playlist. */
+    width: 150px;
+    /* Impedisce al titolo di restringersi. */
+    flex-shrink: 0;
+    /* Elimina i margini. */
+    margin: 0;
+    /* Imposta la dimensione. */
+    font-size: 18px;
+}
+
+/* Testi della comunità. */
+.community-card p {
+    /* Elimina i margini. */
+    margin: 0;
+    /* Imposta il colore secondario. */
+    color: #a9a9ad;
+    /* Imposta la dimensione. */
+    font-size: 15px;
+    /* Imposta la distanza tra le righe. */
+    line-height: 1.4;
+}
+
+/* Descrizione della comunità. */
+.community-card p:nth-of-type(1) {
+    /* Permette alla descrizione di occupare lo spazio centrale. */
+    flex: 1;
+    /* Imposta una larghezza minima. */
+    min-width: 180px;
+}
+
+/* Tag della comunità. */
+.community-card p:nth-of-type(2) {
+    /* Imposta una larghezza controllata. */
+    width: 130px;
+    /* Impedisce al testo di restringersi. */
+    flex-shrink: 0;
+}
+
+/* Numero degli iscritti. */
+.community-card p:nth-of-type(3) {
+    /* Imposta una larghezza controllata. */
+    width: 90px;
+    /* Impedisce al testo di restringersi. */
+    flex-shrink: 0;
+}
+
+/* Contenitore dei pulsanti creato dal JavaScript. */
+.community-card .form-actions {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Mantiene i pulsanti sulla stessa riga. */
+    flex-direction: row;
+    /* Impedisce ai pulsanti di andare a capo. */
+    flex-wrap: nowrap;
+    /* Centra verticalmente i pulsanti. */
+    align-items: center;
+    /* Imposta lo spazio tra i pulsanti. */
+    gap: 10px;
+    /* Elimina il margine superiore del form-actions generale. */
+    margin: 0;
+    /* Impedisce al contenitore di restringersi. */
+    flex-shrink: 0;
+}
+
+/* Pulsanti della comunità. */
+.community-card .form-actions .page-button {
+    /* Impedisce ai pulsanti di restringersi. */
+    flex-shrink: 0;
+    /* Imposta lo spazio interno. */
+    padding: 10px 16px;
+    /* Arrotonda gli angoli come nelle playlist. */
+    border-radius: 11px;
+}
+
+/* Pulsante Modifica. */
+.community-card .form-actions .page-button:not(.danger-button) {
+    /* Imposta lo sfondo scuro come Modifica nelle playlist. */
+    background: #2c2c2f;
+    /* Imposta il colore del testo. */
+    color: white;
+}
+
+/* Pulsante Modifica al passaggio del mouse. */
+.community-card .form-actions .page-button:not(.danger-button):hover {
+    /* Schiarisce lo sfondo. */
+    background: #38383c;
+}
+
+/* Pulsante Elimina. */
+.community-card .form-actions .danger-button {
+    /* Imposta lo stesso rosso delle playlist. */
+    background: #cf4654;
+}
+
+/* Pulsante Elimina al passaggio del mouse. */
+.community-card .form-actions .danger-button:hover {
+    /* Schiarisce leggermente il rosso. */
+    background: #db5360;
+}
+
+/* SCHERMI MEDI */
+
+/* Modifica il layout sugli schermi medi. */
+@media (max-width: 1050px) {
+    /* Modifica la griglia. */
+    .community-grid {
+        /* Occupa tutta la larghezza disponibile. */
+        grid-template-columns: 1fr;
+    }
+    /* Riduce lo spazio nella scheda. */
+    .community-card {
+        /* Riduce la distanza tra gli elementi. */
+        gap: 18px;
+    }
+    /* Riduce la larghezza del titolo. */
+    .community-card h3 {
+        /* Imposta una larghezza più piccola. */
+        width: 120px;
+    }
+    /* Riduce la larghezza dei tag. */
+    .community-card p:nth-of-type(2) {
+        /* Imposta una larghezza più piccola. */
+        width: 100px;
+    }
+}
+
+/* SCHERMI PICCOLI */
+
+/* Modifica il layout sugli schermi piccoli. */
+@media (max-width: 700px) {
+    /* Modifica l'intestazione. */
+    .community-page-header {
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+        /* Allinea tutto a sinistra. */
+        align-items: flex-start;
+        /* Riduce lo spazio. */
+        gap: 16px;
+    }
+    /* Modifica il contenitore del titolo. */
+    .community-page-title {
+        /* Occupa tutta la larghezza. */
+        width: 100%;
+    }
+    /* Permette al titolo di andare a capo sui telefoni. */
+    .community-page-title h1 {
+        /* Permette il ritorno a capo. */
+        white-space: normal;
+    }
+    /* Modifica il pulsante Nuova comunità. */
+    #new-community-button {
+        /* Elimina il margine superiore. */
+        margin-top: 0;
+    }
+    /* Modifica il form di ricerca. */
+    #community-search-form {
+        /* Dispone campo e pulsante verticalmente. */
+        flex-direction: column;
+    }
+    /* Modifica la griglia. */
+    .community-grid {
+        /* Utilizza una sola colonna. */
+        grid-template-columns: 1fr;
+    }
+    /* Modifica la scheda. */
+    .community-card {
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+        /* Allinea gli elementi a sinistra. */
+        align-items: flex-start;
+        /* Riduce lo spazio. */
+        gap: 10px;
+    }
+    /* Modifica il titolo. */
+    .community-card h3 {
+        /* Occupa tutta la larghezza. */
+        width: 100%;
+    }
+    /* Modifica la descrizione. */
+    .community-card p:nth-of-type(1) {
+        /* Occupa tutta la larghezza. */
+        width: 100%;
+        /* Rimuove la larghezza minima. */
+        min-width: 0;
+    }
+    /* Modifica i tag. */
+    .community-card p:nth-of-type(2) {
+        /* Occupa tutta la larghezza. */
+        width: 100%;
+    }
+    /* Modifica gli iscritti. */
+    .community-card p:nth-of-type(3) {
+        /* Occupa tutta la larghezza. */
+        width: 100%;
+    }
+    /* Modifica i pulsanti della comunità. */
+    .community-card .form-actions {
+        /* Aggiunge spazio sopra ai pulsanti. */
+        margin-top: 8px;
+    }
+}
+
+/* RIFINITURA FINALE DELLA PAGINA COMUNITÀ */
+/* Rende l'intestazione visivamente identica a quella delle playlist. */
+.community-page-header {
+    /* Posiziona gli elementi partendo da sinistra. */
+    justify-content: flex-start;
+    /* Allinea gli elementi alla parte superiore. */
+    align-items: flex-start;
+    /* Usa la stessa distanza della pagina Playlist. */
+    gap: 38px;
+    /* Mantiene lo stesso spazio sotto l'intestazione. */
+    margin-bottom: 30px;
+}
+/* Controlla la larghezza del blocco titolo. */
+.community-page-title {
+    /* Lascia spazio sufficiente a Comunità musicali su una riga. */
+    width: 300px;
+    /* Impedisce al blocco di restringersi. */
+    flex: 0 0 300px;
+}
+/* Mantiene il titolo su una sola riga. */
+.community-page-title h1 {
+    /* Evita il ritorno a capo. */
+    white-space: nowrap;
+}
+/* Rende Nuova comunità identico a Nuova playlist. */
+#new-community-button {
+    /* Abbassa leggermente il pulsante. */
+    margin-top: 6px;
+    /* Usa la forma pill. */
+    border-radius: 999px;
+    /* Imposta lo stesso spazio interno. */
+    padding: 11px 20px;
+}
+/* Avvicina la ricerca all'elenco delle comunità. */
+.community-search {
+    /* Riduce lo spazio verticale superfluo. */
+    margin-bottom: 26px;
+}
+/* Allinea la larghezza della ricerca alle schede. */
+#community-search-form {
+    /* Usa la stessa larghezza massima delle schede. */
+    max-width: 960px;
+}
+/* Arrotonda anche il pulsante Cerca. */
+#community-search-form .page-button {
+    /* Usa la stessa forma pill dei pulsanti principali. */
+    border-radius: 999px;
+}
+/* Usa la stessa larghezza delle schede Playlist. */
+.community-grid {
+    /* Mantiene una singola colonna coerente. */
+    grid-template-columns: minmax(700px, 960px);
+}
+/* Rende le schede Comunità coerenti con le playlist. */
+.community-card {
+    /* Riduce leggermente la distanza tra i blocchi. */
+    gap: 24px;
+    /* Mantiene la stessa altezza visiva. */
+    padding: 17px 22px;
+}
+/* Uniforma la larghezza del titolo della card. */
+.community-card h3 {
+    /* Usa la stessa larghezza delle playlist. */
+    width: 145px;
+    /* Mantiene il titolo in evidenza. */
+    font-weight: 700;
+}
+/* Adatta la pagina Comunità agli schermi piccoli. */
+@media (max-width: 700px) {
+    /* Rimuove la larghezza fissa del titolo. */
+    .community-page-title {
+        /* Occupa tutta la larghezza. */
+        width: 100%;
+        /* Rimuove la base fissa. */
+        flex-basis: auto;
+    }
+    /* Occupa tutta la larghezza disponibile. */
+    .community-grid {
+        /* Usa una sola colonna responsive. */
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ALLINEAMENTO FINALE DEL PULSANTE CREA COMUNITÀ */
+#new-community-button {
+    display: block;
+    width: fit-content;
+    margin-top: 22px;
+    margin-bottom: 0;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.community-header {
+    margin-bottom: 24px;
+}
+
+/* Uniforma il pulsante Crea comunità al pulsante Crea playlist. */
+#new-community-button {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                 "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.15px;
+}

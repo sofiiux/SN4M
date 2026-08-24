@@ -1,0 +1,545 @@
+/* Contenitore generale dell'applicazione. */
+.app-layout {
+
+    /* Imposta l'altezza minima. */
+    min-height: 100vh;
+
+}
+
+
+
+/* BARRA SUPERIORE */
+
+
+/* Barra superiore presente in tutte le pagine. */
+.main-header {
+
+    /* Mantiene la barra nella parte superiore dello schermo. */
+    position: fixed;
+
+    /* Posiziona la barra in alto. */
+    top: 0;
+
+    /* Posiziona la barra a sinistra. */
+    left: 0;
+
+    /* Fa occupare tutta la larghezza. */
+    width: 100%;
+
+    /* Imposta l'altezza della barra. */
+    height: 68px;
+
+    /* Utilizza Flexbox. */
+    display: flex;
+
+    /* Allinea verticalmente gli elementi. */
+    align-items: center;
+
+    /* Imposta lo spazio interno. */
+    padding: 0 28px;
+
+    /* Imposta il colore di sfondo. */
+    background: #18181a;
+
+    /* Imposta il bordo inferiore. */
+    border-bottom: 1px solid #2c2c2f;
+
+    /* Fa apparire la barra sopra agli altri elementi. */
+    z-index: 30;
+
+}
+
+
+
+/* Logo presente nella barra superiore. */
+.header-logo {
+
+    /* Imposta il colore verde. */
+    color: #1ed760;
+
+    /* Imposta la dimensione del testo. */
+    font-size: 28px;
+
+    /* Imposta il testo in grassetto. */
+    font-weight: bold;
+
+    /* Rimuove la sottolineatura. */
+    text-decoration: none;
+
+    /* Imposta lo spazio a destra del logo. */
+    margin-right: 35px;
+
+}
+
+
+
+/* NAVIGAZIONE SUPERIORE */
+
+
+/* Contenitore dei collegamenti principali. */
+.header-menu {
+
+    /* Utilizza Flexbox. */
+    display: flex;
+
+    /* Allinea verticalmente i collegamenti. */
+    align-items: center;
+
+    /* Imposta lo spazio tra i collegamenti. */
+    gap: 8px;
+
+}
+
+
+
+/* Collegamenti presenti nella barra superiore. */
+.header-menu a {
+
+    /* Imposta lo spazio interno. */
+    padding: 10px 14px;
+
+    /* Imposta il colore del testo. */
+    color: #b3b3b7;
+
+    /* Rimuove la sottolineatura. */
+    text-decoration: none;
+
+    /* Arrotonda gli angoli. */
+    border-radius: 9px;
+
+}
+
+
+
+/* Pagina attiva e collegamento selezionato con il mouse. */
+.header-menu a.active,
+.header-menu a:hover {
+
+    /* Imposta uno sfondo più chiaro. */
+    background: #2a2a2d;
+
+    /* Imposta il colore del testo. */
+    color: white;
+
+}
+
+
+
+/* Spinge il profilo verso il lato destro. */
+.header-profile {
+
+    /* Occupa tutto lo spazio disponibile a sinistra. */
+    margin-left: auto;
+
+}
+
+
+
+/* CONTENUTO PRINCIPALE */
+
+
+/* Contenuto principale delle pagine. */
+.main-content {
+
+    /* Elimina lo spazio che prima serviva alla sidebar. */
+    margin-left: 0;
+
+    /* Lascia spazio alla barra superiore. */
+    padding: 105px 55px 45px;
+
+    /* Imposta il colore di sfondo. */
+    background: #111111;
+
+    /* Fa occupare almeno tutta l'altezza dello schermo. */
+    min-height: 100vh;
+
+    /* Limita la larghezza del contenuto per evitare righe troppo lunghe. */
+    max-width: 1500px;
+
+    /* Centra il contenuto nella pagina. */
+    margin-right: auto;
+
+    /* Centra il contenuto nella pagina. */
+    margin-left: auto;
+
+}
+
+
+
+/* Intestazioni delle singole pagine. */
+.topbar,
+.top-bar {
+
+    /* Utilizza Flexbox. */
+    display: flex;
+
+    /* Separa titolo e pulsante. */
+    justify-content: space-between;
+
+    /* Allinea verticalmente gli elementi. */
+    align-items: center;
+
+    /* Imposta lo spazio tra gli elementi. */
+    gap: 24px;
+
+    /* Imposta lo spazio sotto l'intestazione. */
+    margin-bottom: 34px;
+
+}
+
+
+
+/* Titoli principali delle pagine. */
+.topbar h1,
+.top-bar h1 {
+
+    /* Imposta il margine. */
+    margin: 0 0 8px;
+
+    /* Imposta la dimensione del titolo. */
+    font-size: 34px;
+
+}
+
+
+
+/* Paragrafi presenti nelle intestazioni. */
+.topbar p,
+.top-bar p {
+
+    /* Elimina il margine automatico. */
+    margin: 0;
+
+}
+
+
+
+/* MENU PROFILO */
+
+
+/* Contenitore del menu profilo. */
+.profile-menu {
+
+    /* Permette di posizionare la tendina rispetto al pulsante. */
+    position: relative;
+
+}
+
+
+
+/* Pulsante circolare del profilo. */
+.profile-menu-button {
+
+    /* Imposta la larghezza. */
+    width: 42px;
+
+    /* Imposta l'altezza. */
+    height: 42px;
+
+    /* Rimuove il bordo. */
+    border: none;
+
+    /* Rende il pulsante circolare. */
+    border-radius: 50%;
+
+    /* Imposta il colore verde. */
+    background: #1ed760;
+
+    /* Imposta il colore del testo. */
+    color: black;
+
+    /* Imposta il testo in grassetto. */
+    font-weight: bold;
+
+    /* Imposta la dimensione del testo. */
+    font-size: 17px;
+
+    /* Utilizza Flexbox. */
+    display: flex;
+
+    /* Centra orizzontalmente il testo. */
+    justify-content: center;
+
+    /* Centra verticalmente il testo. */
+    align-items: center;
+
+}
+
+
+
+/* Effetto quando il mouse passa sul pulsante profilo. */
+.profile-menu-button:hover {
+
+    /* Schiarisce leggermente il verde. */
+    background: #24e268;
+
+}
+
+
+
+/* Tendina del profilo. */
+.profile-dropdown {
+
+    /* Posiziona la tendina rispetto al pulsante. */
+    position: absolute;
+
+    /* La posiziona sotto al pulsante. */
+    top: 52px;
+
+    /* La allinea a destra. */
+    right: 0;
+
+    /* Imposta la larghezza. */
+    width: 220px;
+
+    /* Imposta lo spazio interno. */
+    padding: 16px;
+
+    /* Imposta lo sfondo. */
+    background: #1b1b1d;
+
+    /* Imposta il bordo. */
+    border: 1px solid #303033;
+
+    /* Arrotonda gli angoli. */
+    border-radius: 12px;
+
+    /* Nasconde inizialmente la tendina. */
+    display: none;
+
+    /* Fa apparire la tendina sopra agli altri elementi. */
+    z-index: 40;
+
+}
+
+
+
+/* Mostra la tendina quando viene aggiunta la classe open. */
+.profile-dropdown.open {
+
+    /* Mostra la tendina. */
+    display: block;
+
+}
+
+
+
+/* Nome utente nella tendina. */
+.profile-dropdown strong {
+
+    /* Fa occupare una riga intera. */
+    display: block;
+
+    /* Imposta lo spazio sotto il nome. */
+    margin-bottom: 5px;
+
+}
+
+
+
+/* Email nella tendina. */
+.profile-dropdown p {
+
+    /* Imposta il margine. */
+    margin: 0 0 14px;
+
+    /* Imposta il colore del testo. */
+    color: #a9a9ad;
+
+    /* Imposta la dimensione del testo. */
+    font-size: 14px;
+
+    /* Permette all'email di andare a capo. */
+    overflow-wrap: break-word;
+
+}
+
+
+
+/* Collegamento alla pagina profilo. */
+.profile-dropdown-link {
+
+    /* Fa occupare una riga intera. */
+    display: block;
+
+    /* Imposta lo spazio interno. */
+    padding: 10px;
+
+    /* Arrotonda gli angoli. */
+    border-radius: 8px;
+
+    /* Rimuove la sottolineatura. */
+    text-decoration: none;
+
+    /* Imposta il colore bianco. */
+    color: white;
+
+}
+
+
+
+/* Effetto sul collegamento al profilo. */
+.profile-dropdown-link:hover {
+
+    /* Imposta uno sfondo leggermente più chiaro. */
+    background: #29292c;
+
+}
+
+
+
+/* Pulsante Logout della tendina. */
+.profile-dropdown-logout {
+
+    /* Fa occupare tutta la larghezza. */
+    width: 100%;
+
+    /* Imposta lo spazio interno. */
+    padding: 10px;
+
+    /* Imposta lo spazio superiore. */
+    margin-top: 6px;
+
+    /* Rimuove il bordo. */
+    border: none;
+
+    /* Arrotonda gli angoli. */
+    border-radius: 8px;
+
+    /* Mantiene lo sfondo trasparente. */
+    background: transparent;
+
+    /* Imposta il testo rosso. */
+    color: #ff6b6b;
+
+    /* Allinea il testo a sinistra. */
+    text-align: left;
+
+}
+
+
+
+/* Effetto sul pulsante Logout. */
+.profile-dropdown-logout:hover {
+
+    /* Imposta uno sfondo leggermente più chiaro. */
+    background: #29292c;
+
+}
+
+
+
+/* ADATTAMENTO AGLI SCHERMI PICCOLI */
+
+
+/* Modifica il layout quando lo schermo è piccolo. */
+@media (max-width: 800px) {
+
+    /* Modifica la barra superiore. */
+    .main-header {
+
+        /* Permette alla barra di aumentare altezza. */
+        height: auto;
+
+        /* Permette agli elementi di andare a capo. */
+        flex-wrap: wrap;
+
+        /* Imposta lo spazio interno. */
+        padding: 14px 18px;
+
+        /* Imposta lo spazio tra le righe. */
+        gap: 10px;
+
+    }
+
+
+    /* Modifica il logo. */
+    .header-logo {
+
+        /* Riduce lo spazio a destra. */
+        margin-right: 10px;
+
+    }
+
+
+    /* Modifica il menu superiore. */
+    .header-menu {
+
+        /* Permette ai collegamenti di andare a capo. */
+        flex-wrap: wrap;
+
+        /* Riduce lo spazio tra i collegamenti. */
+        gap: 4px;
+
+    }
+
+
+    /* Modifica i collegamenti. */
+    .header-menu a {
+
+        /* Riduce lo spazio interno. */
+        padding: 8px 10px;
+
+    }
+
+
+    /* Modifica il contenuto principale. */
+    .main-content {
+
+        /* Aumenta lo spazio sopra perché la barra può essere più alta. */
+        padding: 130px 20px 30px;
+
+    }
+
+
+    /* Modifica le intestazioni delle pagine. */
+    .topbar,
+    .top-bar {
+
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+
+        /* Allinea gli elementi a sinistra. */
+        align-items: flex-start;
+
+    }
+
+}
+/* RIFINITURA FINALE DEL LAYOUT */
+/* Uniforma la larghezza utile di tutte le pagine principali. */
+.main-content {
+    /* Occupa tutta la larghezza disponibile entro il limite massimo. */
+    width: 100%;
+    /* Mantiene il contenuto leggibile e coerente tra le pagine. */
+    max-width: 1240px;
+    /* Lascia spazio alla barra superiore e usa margini laterali uniformi. */
+    padding: 104px 48px 48px;
+}
+/* Uniforma le intestazioni interne delle pagine. */
+.topbar,
+.top-bar {
+    /* Posiziona gli elementi partendo da sinistra. */
+    justify-content: flex-start;
+    /* Allinea titolo e azioni alla parte superiore. */
+    align-items: flex-start;
+    /* Mantiene una distanza coerente tra titolo e azione principale. */
+    gap: 36px;
+    /* Mantiene uno spazio uniforme prima del contenuto successivo. */
+    margin-bottom: 34px;
+}
+/* Uniforma la dimensione dei titoli principali. */
+.topbar h1,
+.top-bar h1 {
+    /* Imposta una dimensione coerente in tutte le pagine. */
+    font-size: 34px;
+    /* Imposta una distanza compatta dalla descrizione. */
+    margin: 0 0 7px;
+}
+/* Adatta la rifinitura finale agli schermi piccoli. */
+@media (max-width: 800px) {
+    /* Riduce i margini laterali del contenuto. */
+    .main-content {
+        /* Lascia spazio alla barra superiore responsive. */
+        padding: 130px 20px 32px;
+    }
+}

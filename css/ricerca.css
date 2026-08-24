@@ -1,0 +1,432 @@
+/* RIGA STATO SPOTIFY */
+
+/* Contenitore dello stato Spotify. */
+.spotify-status-row {
+    /* Limita la larghezza della sezione. */
+    max-width: 960px;
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Separa il testo dal pulsante. */
+    justify-content: space-between;
+    /* Allinea verticalmente testo e pulsante. */
+    align-items: center;
+    /* Imposta lo spazio tra gli elementi. */
+    gap: 20px;
+    /* Imposta lo spazio sopra. */
+    margin-top: 8px;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 30px;
+    /* Imposta lo spazio sotto il contenuto. */
+    padding-bottom: 20px;
+    /* Crea una separazione dalla ricerca. */
+    border-bottom: 1px solid #29292c;
+}
+
+/* Stato del collegamento Spotify. */
+#spotify-status {
+    /* Elimina i margini automatici del paragrafo. */
+    margin: 0;
+    /* Imposta il colore del testo. */
+    color: #b3b3b7;
+    /* Imposta una distanza comoda tra le righe. */
+    line-height: 1.45;
+}
+
+/* Pulsante per collegare Spotify. */
+#spotify-login-button {
+    /* Impedisce al pulsante di restringersi. */
+    flex-shrink: 0;
+    /* Rende il pulsante molto arrotondato. */
+    border-radius: 999px;
+}
+
+/* Messaggio mostrato quando Spotify è collegato. */
+.spotify-success {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Allinea gli elementi. */
+    align-items: center;
+    /* Imposta lo spazio. */
+    gap: 10px;
+    /* Imposta il colore verde. */
+    color: #1ed760;
+    /* Imposta il testo in grassetto. */
+    font-weight: 600;
+}
+
+/* Cerchio verde con la spunta. */
+.spotify-check {
+    /* Imposta la larghezza. */
+    width: 26px;
+    /* Imposta l'altezza. */
+    height: 26px;
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Centra orizzontalmente. */
+    justify-content: center;
+    /* Centra verticalmente. */
+    align-items: center;
+    /* Rende l'elemento circolare. */
+    border-radius: 50%;
+    /* Imposta lo sfondo verde. */
+    background: #1ed760;
+    /* Imposta il colore della spunta. */
+    color: black;
+    /* Imposta il testo in grassetto. */
+    font-weight: bold;
+}
+
+
+/* SEZIONE RICERCA */
+
+/* Contenitore della ricerca. */
+.search-section {
+    /* Limita la larghezza. */
+    max-width: 960px;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 30px;
+}
+
+/* Titolo della ricerca. */
+.search-section h2 {
+    /* Elimina il margine superiore. */
+    margin-top: 0;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 22px;
+}
+
+/* Etichetta del campo di ricerca. */
+.search-section label {
+    /* Mostra l'etichetta su una riga separata. */
+    display: block;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 10px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 700;
+}
+
+/* Contenitore della ricerca. */
+.search-controls {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Imposta lo spazio tra gli elementi. */
+    gap: 12px;
+}
+
+/* Campo di ricerca. */
+.search-controls input {
+    /* Occupa lo spazio disponibile. */
+    flex: 1;
+    /* Imposta lo spazio interno. */
+    padding: 14px 16px;
+    /* Imposta il bordo. */
+    border: 1px solid #444444;
+    /* Arrotonda gli angoli. */
+    border-radius: 13px;
+    /* Imposta lo sfondo. */
+    background: #242426;
+    /* Imposta il colore del testo. */
+    color: white;
+    /* Rimuove il bordo automatico. */
+    outline: none;
+}
+
+/* Campo di ricerca selezionato. */
+.search-controls input:focus {
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+}
+
+/* Testo segnaposto. */
+.search-controls input::placeholder {
+    /* Imposta il colore. */
+    color: #77777c;
+}
+
+/* Arrotonda il pulsante Cerca. */
+.search-controls .page-button {
+    /* Usa la stessa forma pill degli altri pulsanti. */
+    border-radius: 999px;
+}
+
+
+/* ELEMENTI NASCOSTI */
+
+/* Nasconde un elemento. */
+.hidden {
+    /* Nasconde completamente l'elemento. */
+    display: none;
+}
+
+
+/* SEZIONE RISULTATI */
+
+/* Contenitore dei risultati. */
+.results-section {
+    /* Limita la larghezza. */
+    max-width: 960px;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 24px;
+}
+
+/* Titolo dei risultati. */
+.results-section h2 {
+    /* Elimina il margine superiore. */
+    margin-top: 0;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 20px;
+}
+
+/* Contenitore dei risultati. */
+#search-results {
+    /* Utilizza una griglia. */
+    display: grid;
+    /* Imposta lo spazio tra i risultati. */
+    gap: 14px;
+}
+
+/* Messaggio vuoto. */
+.empty-message {
+    /* Imposta il colore del testo. */
+    color: #a1a1a6;
+}
+
+
+/* SINGOLO RISULTATO */
+
+/* Scheda della canzone. */
+.song-result {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Separa informazioni e controlli. */
+    justify-content: space-between;
+    /* Allinea verticalmente gli elementi. */
+    align-items: center;
+    /* Imposta lo spazio. */
+    gap: 18px;
+    /* Imposta lo spazio interno. */
+    padding: 17px 22px;
+    /* Imposta lo sfondo. */
+    background: #1c1c1e;
+    /* Arrotonda gli angoli. */
+    border-radius: 16px;
+    /* Imposta il bordo. */
+    border: 1px solid #333336;
+}
+
+/* Testo secondario della canzone. */
+.song-information p {
+    /* Imposta il colore. */
+    color: #a1a1a6;
+    /* Imposta la distanza tra le righe. */
+    line-height: 1.4;
+    /* Riduce il margine verticale. */
+    margin: 5px 0 0;
+}
+
+
+/* CONTROLLI DEL BRANO */
+
+/* Contenitore dei controlli. */
+.song-controls {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Imposta lo spazio. */
+    gap: 10px;
+    /* Allinea verticalmente gli elementi. */
+    align-items: center;
+}
+
+/* Menu dei controlli. */
+.song-controls select {
+    /* Imposta lo spazio interno. */
+    padding: 10px 12px;
+    /* Imposta il bordo. */
+    border: 1px solid #444444;
+    /* Arrotonda gli angoli. */
+    border-radius: 11px;
+    /* Imposta lo sfondo. */
+    background: #1c1c1e;
+    /* Imposta il colore del testo. */
+    color: white;
+}
+
+
+/* SFONDO DEL MODAL */
+
+/* Sfondo scuro della finestra. */
+.quick-playlist-overlay {
+    /* Posiziona il modal sopra tutta la pagina. */
+    position: fixed;
+    /* Posiziona il modal in alto. */
+    top: 0;
+    /* Posiziona il modal a sinistra. */
+    left: 0;
+    /* Imposta tutta la larghezza. */
+    width: 100%;
+    /* Imposta tutta l'altezza. */
+    height: 100%;
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Centra orizzontalmente. */
+    justify-content: center;
+    /* Centra verticalmente. */
+    align-items: center;
+    /* Imposta lo sfondo trasparente scuro. */
+    background: rgba(0, 0, 0, 0.72);
+    /* Posiziona il modal sopra gli altri elementi. */
+    z-index: 1000;
+    /* Imposta lo spazio interno. */
+    padding: 20px;
+}
+
+
+/* FINESTRA DEL MODAL */
+
+/* Finestra centrale. */
+.quick-playlist-modal {
+    /* Imposta la larghezza. */
+    width: 100%;
+    /* Limita la larghezza massima. */
+    max-width: 520px;
+    /* Imposta lo spazio interno. */
+    padding: 28px;
+    /* Imposta lo sfondo. */
+    background: #1c1c1e;
+    /* Imposta il bordo. */
+    border: 1px solid #37373a;
+    /* Arrotonda gli angoli. */
+    border-radius: 20px;
+}
+
+/* Titolo del modal. */
+.quick-playlist-modal h2 {
+    /* Elimina il margine superiore. */
+    margin-top: 0;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 8px;
+}
+
+/* Descrizione del modal. */
+.quick-playlist-modal > p {
+    /* Imposta il margine superiore. */
+    margin-top: 0;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 24px;
+    /* Imposta il colore. */
+    color: #a1a1a6;
+    /* Imposta la distanza tra le righe. */
+    line-height: 1.45;
+}
+
+
+/* CAMPI DEL MODAL */
+
+/* Gruppo di un campo del modal. */
+.quick-form-group {
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 16px;
+}
+
+/* Etichetta del modal. */
+.quick-form-group label {
+    /* Mostra l'etichetta su una riga separata. */
+    display: block;
+    /* Imposta lo spazio sotto. */
+    margin-bottom: 7px;
+    /* Imposta il testo in grassetto. */
+    font-weight: 600;
+}
+
+/* Campi del modal. */
+.quick-form-group input,
+.quick-form-group textarea,
+.quick-form-group select {
+    /* Occupa tutta la larghezza. */
+    width: 100%;
+    /* Imposta lo spazio interno. */
+    padding: 12px 14px;
+    /* Imposta il bordo. */
+    border: 1px solid #444448;
+    /* Arrotonda gli angoli. */
+    border-radius: 11px;
+    /* Imposta lo sfondo. */
+    background: #29292c;
+    /* Imposta il colore del testo. */
+    color: white;
+    /* Rimuove il bordo automatico. */
+    outline: none;
+    /* Imposta il font ereditato. */
+    font: inherit;
+}
+
+/* Campi selezionati. */
+.quick-form-group input:focus,
+.quick-form-group textarea:focus,
+.quick-form-group select:focus {
+    /* Imposta il bordo verde. */
+    border-color: #1ed760;
+}
+
+/* Area della descrizione. */
+.quick-form-group textarea {
+    /* Permette solamente il ridimensionamento verticale. */
+    resize: vertical;
+}
+
+
+/* PULSANTI DEL MODAL */
+
+/* Contenitore dei pulsanti del modal. */
+.quick-modal-actions {
+    /* Utilizza Flexbox. */
+    display: flex;
+    /* Allinea i pulsanti a destra. */
+    justify-content: flex-end;
+    /* Imposta lo spazio. */
+    gap: 10px;
+    /* Imposta lo spazio sopra. */
+    margin-top: 24px;
+}
+
+
+/* ADATTAMENTO AGLI SCHERMI PICCOLI */
+
+@media (max-width: 700px) {
+
+    /* Modifica la riga Spotify. */
+    .spotify-status-row {
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+        /* Allinea gli elementi a sinistra. */
+        align-items: flex-start;
+    }
+
+    /* Modifica i controlli della ricerca. */
+    .search-controls {
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+    }
+
+    /* Modifica le schede delle canzoni. */
+    .song-result {
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+        /* Allinea gli elementi. */
+        align-items: stretch;
+    }
+
+    /* Modifica i controlli delle canzoni. */
+    .song-controls {
+        /* Dispone gli elementi verticalmente. */
+        flex-direction: column;
+        /* Allinea gli elementi. */
+        align-items: stretch;
+    }
+
+    /* Modifica i pulsanti del modal. */
+    .quick-modal-actions {
+        /* Dispone i pulsanti verticalmente. */
+        flex-direction: column-reverse;
+    }
+}

@@ -171,14 +171,14 @@
                     <div class="form-group">
 
                         <!-- Etichetta Username. -->
-                        <label for="profile-username">
+                        <label for="username">
                             Username
                         </label>
 
                         <!-- Campo Username. -->
                         <input
                             type="text"
-                            id="profile-username"
+                            id="username"
                             required
                         >
 
@@ -189,17 +189,28 @@
                     <div class="form-group">
 
                         <!-- Etichetta Email. -->
-                        <label for="profile-email">
+                        <label for="email">
                             Email
                         </label>
 
                         <!-- Campo Email. -->
                         <input
                             type="email"
-                            id="profile-email"
+                            id="email"
                             required
                         >
 
+                    </div>
+
+
+                    <!-- Apre il gruppo Password. -->
+                    <div class="form-group">
+                        <label for="password">Nuova password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Lascia vuoto per non modificarla"
+                        >
                     </div>
 
 
@@ -207,23 +218,36 @@
                     <div class="form-group">
 
                         <!-- Mostra l'etichetta delle preferenze. -->
-                        <label for="profile-preferences">
+                        <label for="musical-preferences">
                             Preferenze musicali
                         </label>
 
                         <!-- Campo nascosto contenente le preferenze selezionate. -->
                         <input
                             type="hidden"
-                            id="profile-preferences"
+                            id="musical-preferences"
                         >
 
                         <!-- Contenitore dei pulsanti dei generi. -->
                         <div
                             class="genre-selector"
-                            data-genre-input="profile-preferences"
+                            data-genre-input="musical-preferences"
                         ></div>
 
                     </div>
+
+
+                    <!-- Apre il gruppo degli artisti preferiti. -->
+                    <div class="form-group">
+                        <label for="favorite-artists">Artisti o gruppi preferiti</label>
+                        <input
+                            type="text"
+                            id="favorite-artists"
+                            placeholder="Es. Queen, Coldplay"
+                        >
+                    </div>
+
+                    <p id="profile-message" class="profile-message"></p>
 
 
                     <!-- Contenitore del pulsante Salva. -->

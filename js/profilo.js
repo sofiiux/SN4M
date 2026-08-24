@@ -27,13 +27,13 @@ if (currentUser) {
     // Esegue questa parte dell’istruzione JavaScript.
     emailInput.value = currentUser.email;
     // Esegue questa parte dell’istruzione JavaScript.
-    passwordInput.value = currentUser.password;
+    passwordInput.value = "";
     // Esegue questa parte dell’istruzione JavaScript.
-    preferencesInput.value = currentUser.musicalPreferences;
+    preferencesInput.value = currentUser.musicalPreferences || "";
     // Aggiorna i pulsanti delle preferenze musicali.
     syncGenreSelector(document.querySelector('[data-genre-input="musical-preferences"]'), preferencesInput);
     // Esegue questa parte dell’istruzione JavaScript.
-    artistsInput.value = currentUser.favoriteArtists;
+    artistsInput.value = currentUser.favoriteArtists || "";
 // Chiude o completa il blocco di codice precedente.
 }
 // Collega una funzione a un evento dell’utente.
@@ -77,7 +77,7 @@ profileForm.addEventListener("submit", function (event) {
         // Esegue questa parte dell’istruzione JavaScript.
         email: emailInput.value.trim(),
         // Esegue questa parte dell’istruzione JavaScript.
-        password: passwordInput.value,
+        password: passwordInput.value.trim() || currentUser.password,
         // Esegue questa parte dell’istruzione JavaScript.
         musicalPreferences: preferencesInput.value.trim(),
         // Esegue questa parte dell’istruzione JavaScript.
@@ -100,6 +100,12 @@ profileForm.addEventListener("submit", function (event) {
     saveUsers(updatedUsers);
     // Esegue questa parte dell’istruzione JavaScript.
     saveLoggedUser(updatedUser);
+    // Aggiorna anche l'oggetto usato dalla pagina corrente.
+    Object.assign(currentUser, updatedUser);
+    // Svuota il campo password dopo il salvataggio.
+    passwordInput.value = "";
+    // Aggiorna subito i dati mostrati nel menu del profilo.
+    setupProfileMenu();
     // Imposta il testo mostrato nell’elemento HTML.
     profileMessage.textContent = "Profilo modificato correttamente.";
     // Esegue questa parte dell’istruzione JavaScript.

@@ -71,7 +71,8 @@
 
 /* Gestisce i campi Username ed Email. */
 .profile-card input[type="text"],
-.profile-card input[type="email"] {
+.profile-card input[type="email"],
+.profile-card input[type="password"] {
     width: 100%;
     box-sizing: border-box;
 
@@ -91,7 +92,8 @@
 
 /* Modifica il bordo del campo selezionato. */
 .profile-card input[type="text"]:focus,
-.profile-card input[type="email"]:focus {
+.profile-card input[type="email"]:focus,
+.profile-card input[type="password"]:focus {
     border-color: #1ed760;
 }
 
@@ -210,4 +212,11 @@
     .profile-card .genre-selector {
         gap: 7px;
     }
+}
+
+/* Messaggio di conferma o errore del profilo. */
+.profile-message {
+    min-height: 20px;
+    margin: 4px 0 0 0;
+    font-size: 14px;
 }
